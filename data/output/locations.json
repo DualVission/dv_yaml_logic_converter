@@ -1,0 +1,2111 @@
+/*
+	{
+		"Tracker Name": "The Wind Waker Randomizer Map Tracker",
+		"Game Name"   : "Wind Waker Randomizer",
+		"Creators":
+			"Darkened5ky",
+			"Spleebie",
+			"emerald000",
+			"DualVission"
+	},
+	{
+		"Created with": "dv_yaml_logic_converter",
+		"Tool by"     : "Zach the DualVission"
+	}
+*/
+[
+	//Macros
+
+	/* Can Play Wind's Requiem */
+	{
+		"name": "can_play_wind's_requiem",
+		"access_rules": [ "windwaker,requiem" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Play Ballad of Gales */
+	{
+		"name": "can_play_ballad_of_gales",
+		"access_rules": [ "ballad,windwaker" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Play Command Melody */
+	{
+		"name": "can_play_command_melody",
+		"access_rules": [ "command,windwaker" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Play Earth God's Lyric */
+	{
+		"name": "can_play_earth_god's_lyric",
+		"access_rules": [ "lyric,windwaker" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Play Wind God's Aria */
+	{
+		"name": "can_play_wind_god's_aria",
+		"access_rules": [ "aria,windwaker" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Play Song of Passing */
+	{
+		"name": "can_play_song_of_passing",
+		"access_rules": [ "passing,windwaker" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Fly With Deku Leaf Outdoors */
+	{
+		"name": "can_fly_with_deku_leaf_outdoors",
+		"access_rules": [ "windwaker,leaf" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Aim Mirror Shield */
+	{
+		"name": "can_aim_mirror_shield",
+		"access_rules": [ "mirror,sword",
+		                  "mirror,windwaker",
+		                  "grapple,mirror",
+		                  "boomerang,mirror",
+		                  "leaf,mirror",
+		                  "mirror,bow",
+		                  "hookshot,mirror" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Cut or Slash */
+	{
+		"name": "can_cut_or_slash",
+		"access_rules": [ "sword",
+		                  "hammer" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Jumpslash */
+	{
+		"name": "can_jumpslash",
+		"access_rules": [ "@can_cut_or_slash" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Move Boulders */
+	{
+		"name": "can_move_boulders",
+		"access_rules": [ "bombs",
+		                  "power" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Defeat Door Flowers */
+	{
+		"name": "can_defeat_door_flowers",
+		"access_rules": [ "boomerang",
+		                  "bow",
+		                  "bombs",
+		                  "hookshot" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Hit Diamond Switches at Range */
+	{
+		"name": "can_hit_diamond_switches_at_range",
+		"access_rules": [ "boomerang",
+		                  "bow",
+		                  "hookshot" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Destroy Seeds Hanging by Vines */
+	{
+		"name": "can_destroy_seeds_hanging_by_vines",
+		"access_rules": [ "boomerang",
+		                  "bow",
+		                  "bombs",
+		                  "hookshot" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Refill Magic */
+	{
+		"name": "can_refill_magic",
+		"access_rules": [ "@can_cut_grass",
+		                  "double",
+		                  "bottle,[logic_tricked]" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Hero's Bow */
+	{
+		"name": "hero's_bow",
+		"access_rules": [ "bow" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* All 8 Triforce Shards */
+	{
+		"name": "all_8_triforce_shards",
+		"access_rules": [ "triforce_1,triforce_2,triforce_3,triforce_4,triforce_5,triforce_6,triforce_7,triforce_8" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Tingle Tuner Bombs */
+	{
+		"name": "tingle_tuner_bombs",
+		"access_rules": [ "bombs" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Access Dungeon Entrance On Dragon Roost Island */
+	{
+		"name": "can_access_dungeon_entrance_on_dragon_roost_island",
+		"access_rules": [ "@can_travel_to_dragon_roost_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Access Forest Haven */
+	{
+		"name": "can_access_forest_haven",
+		"access_rules": [ "@can_travel_to_forest_haven,grapple",
+		                  "@can_fly_with_deku_leaf_outdoors,@can_travel_to_forest_haven",
+		                  "@can_travel_to_forest_haven,logic_tricked,[logic_complex],windwaker" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Access Dungeon Entrance In Forest Haven Sector */
+	{
+		"name": "can_access_dungeon_entrance_in_forest_haven_sector",
+		"access_rules": [ "@can_access_forest_haven,@can_fly_with_deku_leaf_outdoors,@can_refill_magic,grapple",
+		                  "@can_access_forest_haven,@can_fly_with_deku_leaf_outdoors,@can_refill_magic,[logic_tricked],windwaker",
+		                  "logic_tricked,[logic_complex],windwaker" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Access Dungeon Entrance In Tower of the Gods Sector */
+	{
+		"name": "can_access_dungeon_entrance_in_tower_of_the_gods_sector",
+		"access_rules": [ "@can_travel_to_tower_of_the_gods,din,farore,nayru" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Access Dungeon Entrance On Headstone Island */
+	{
+		"name": "can_access_dungeon_entrance_on_headstone_island",
+		"access_rules": [ "@can_travel_to_headstone_island,power",
+		                  "@can_travel_to_headstone_island,logic_tricked,[logic_complex],windwaker" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Access Dungeon Entrance On Gale Isle */
+	{
+		"name": "can_access_dungeon_entrance_on_gale_isle",
+		"access_rules": [ "@can_travel_to_gale_isle,boots,hammer",
+		                  "@can_travel_to_gale_isle,logic_tricked,[logic_complex],boots,windwaker",
+		                  "@can_travel_to_gale_isle,logic_tricked,[logic_glitched],hammer,windwaker",
+		                  "@can_travel_to_gale_isle,logic_tricked,[logic_complex],logic_tricked,[logic_glitched],windwaker" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Access Dragon Roost Cavern */
+	{
+		"name": "can_access_dragon_roost_cavern",
+		"access_rules": [ "@can_access_dungeon_entrance_on_dragon_roost_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Access Forbidden Woods */
+	{
+		"name": "can_access_forbidden_woods",
+		"access_rules": [ "@can_access_dungeon_entrance_in_forest_haven_sector" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Access Forbidden Woods Basement */
+	{
+		"name": "can_access_forbidden_woods_basement",
+		"access_rules": [ "@can_access_forbidden_woods,@can_defeat_boko_babas,leaf,logic_tricked,[logic_glitched],windwaker",
+		                  "@can_access_forbidden_woods,logic_tricked,[logic_complex],leaf,windwaker",
+		                  "bombs,@can_access_forbidden_woods,leaf,logic_tricked,[logic_glitched]",
+		                  "boomerang,@can_access_forbidden_woods,leaf" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Access Tower of the Gods */
+	{
+		"name": "can_access_tower_of_the_gods",
+		"access_rules": [ "@can_access_dungeon_entrance_in_tower_of_the_gods_sector" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Access Earth Temple */
+	{
+		"name": "can_access_earth_temple",
+		"access_rules": [ "@can_access_dungeon_entrance_on_headstone_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Get into Earth Temple */
+	{
+		"name": "can_get_into_earth_temple",
+		"access_rules": [ "@can_access_earth_temple,@can_play_command_melody",
+		                  "@can_access_earth_temple,leaf,logic_tricked,[logic_glitched]" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Access Earth Temple Basement */
+	{
+		"name": "can_access_earth_temple_basement",
+		"access_rules": [ "@can_get_into_earth_temple,@can_play_command_melody,et_key:3",
+		                  "@can_aim_mirror_shield,@can_get_into_earth_temple,logic_tricked,[logic_complex],et_key:2" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Access Wind Temple */
+	{
+		"name": "can_access_wind_temple",
+		"access_rules": [ "@can_access_dungeon_entrance_on_gale_isle" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Access Wind Temple Basement */
+	{
+		"name": "can_access_wind_temple_basement",
+		"access_rules": [ "@can_access_wind_temple,@can_play_command_melody,leaf,logic_tricked,[logic_glitched],double",
+		                  "@can_access_wind_temple,@can_play_command_melody,leaf,bottle,logic_tricked,[logic_glitched]",
+		                  "@can_access_wind_temple,@can_play_command_melody,leaf,logic_tricked,[logic_glitched],boots",
+		                  "@can_access_wind_temple,@can_play_command_melody,leaf,boots",
+		                  "@can_access_wind_temple,@can_play_command_melody,@can_spring_storage,@can_spring_storage",
+		                  "bombs,@can_access_wind_temple,@can_play_command_melody,@can_spring_storage",
+		                  "@can_access_wind_temple,@can_jumpslash,@can_play_command_melody,@can_spring_storage" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Get into Secret Cave Entrance on Outset Island */
+	{
+		"name": "can_get_into_secret_cave_entrance_on_outset_island",
+		"access_rules": [ "@can_cut_down_outset_trees,@can_fly_with_deku_leaf_outdoors,power",
+		                  "@can_fly_with_deku_leaf_outdoors,power,[logic_tricked]",
+		                  "hookshot,power",
+		                  "logic_tricked,[logic_complex],windwaker" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Access Secret Cave Entrance on Outset Island */
+	{
+		"name": "can_access_secret_cave_entrance_on_outset_island",
+		"access_rules": [ "@can_get_into_secret_cave_entrance_on_outset_island,@can_get_into_secret_cave_entrance_on_outset_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Access Secret Cave Entrance on Dragon Roost Island */
+	{
+		"name": "can_access_secret_cave_entrance_on_dragon_roost_island",
+		"access_rules": [ "bombs,@can_travel_to_dragon_roost_island",
+		                  "@can_travel_to_dragon_roost_island,power",
+		                  "@can_travel_to_dragon_roost_island,logic_tricked,[logic_glitched]" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Access Secret Cave Entrance on Fire Mountain */
+	{
+		"name": "can_access_secret_cave_entrance_on_fire_mountain",
+		"access_rules": [ "@can_sail,@can_travel_to_fire_mountain,firearrowicearrow" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Access Secret Cave Entrance on Ice Ring Isle */
+	{
+		"name": "can_access_secret_cave_entrance_on_ice_ring_isle",
+		"access_rules": [ "@can_sail,@can_travel_to_ice_ring_isle,firearrowicearrow" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Get into Secret Cave Entrance on Private Oasis */
+	{
+		"name": "can_get_into_secret_cave_entrance_on_private_oasis",
+		"access_rules": [ "deed,delivery,grapple",
+		                  "@can_fly_with_deku_leaf_outdoors,logic_tricked,[logic_glitched],grapple,windwaker",
+		                  "logic_tricked,[logic_glitched],grapple,hookshot,windwaker",
+		                  "logic_tricked,[logic_complex],grapple,windwaker" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Access Secret Cave Entrance on Private Oasis */
+	{
+		"name": "can_access_secret_cave_entrance_on_private_oasis",
+		"access_rules": [ "@can_get_into_secret_cave_entrance_on_private_oasis,@can_travel_to_private_oasis" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Access Secret Cave Entrance on Needle Rock Isle */
+	{
+		"name": "can_access_secret_cave_entrance_on_needle_rock_isle",
+		"access_rules": [ "@can_travel_to_needle_rock_isle,firearrowicearrow",
+		                  "@can_travel_to_needle_rock_isle,logic_tricked,[logic_glitched],windwaker" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Access Secret Cave Entrance on Angular Isles */
+	{
+		"name": "can_access_secret_cave_entrance_on_angular_isles",
+		"access_rules": [ "@can_fly_with_deku_leaf_outdoors,@can_travel_to_angular_isles",
+		                  "@can_travel_to_angular_isles,hookshot",
+		                  "@can_travel_to_angular_isles,logic_tricked,[logic_complex],windwaker" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Get into Secret Cave Entrance on Boating Course */
+	{
+		"name": "can_get_into_secret_cave_entrance_on_boating_course",
+		"access_rules": [ "@can_fly_with_deku_leaf_outdoors",
+		                  "hookshot",
+		                  "@can_cut_or_slash,logic_tricked,[logic_complex],windwaker" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Access Secret Cave Entrance on Boating Course */
+	{
+		"name": "can_access_secret_cave_entrance_on_boating_course",
+		"access_rules": [ "@can_get_into_secret_cave_entrance_on_boating_course,@can_travel_to_boating_course" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Get into Secret Cave Entrance on Stone Watcher Island */
+	{
+		"name": "can_get_into_secret_cave_entrance_on_stone_watcher_island",
+		"access_rules": [ "power",
+		                  "@can_cut_or_slash,logic_tricked,[logic_complex],windwaker" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Access Secret Cave Entrance on Stone Watcher Island */
+	{
+		"name": "can_access_secret_cave_entrance_on_stone_watcher_island",
+		"access_rules": [ "@can_get_into_secret_cave_entrance_on_stone_watcher_island,@can_travel_to_stone_watcher_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Access Secret Cave Entrance on Overlook Island */
+	{
+		"name": "can_access_secret_cave_entrance_on_overlook_island",
+		"access_rules": [ "@can_travel_to_overlook_island,hookshot",
+		                  "@can_travel_to_overlook_island,logic_tricked,[logic_complex],windwaker" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Access Secret Cave Entrance on Bird's Peak Rock */
+	{
+		"name": "can_access_secret_cave_entrance_on_bird's_peak_rock",
+		"access_rules": [ "baitbag,@can_travel_to_bird's_peak_rock",
+		                  "@can_travel_to_bird's_peak_rock,grapple,[logic_tricked]",
+		                  "@can_travel_to_bird's_peak_rock,logic_tricked,[logic_complex],windwaker" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Access Secret Cave Entrance on Pawprint Isle */
+	{
+		"name": "can_access_secret_cave_entrance_on_pawprint_isle",
+		"access_rules": [ "@can_travel_to_pawprint_isle" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Access Secret Cave Entrance on Pawprint Isle Side Isle */
+	{
+		"name": "can_access_secret_cave_entrance_on_pawprint_isle_side_isle",
+		"access_rules": [ "@can_travel_to_pawprint_isle,hookshot",
+		                  "bombs,@can_travel_to_pawprint_isle,leaf,logic_tricked,[logic_glitched]" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Access Secret Cave Entrance on Diamond Steppe Island */
+	{
+		"name": "can_access_secret_cave_entrance_on_diamond_steppe_island",
+		"access_rules": [ "@can_travel_to_diamond_steppe_island,hookshot",
+		                  "@can_sail,@can_travel_to_diamond_steppe_island,logic_tricked,[logic_glitched],swift,windwaker" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Access Secret Cave Entrance on Bomb Island */
+	{
+		"name": "can_access_secret_cave_entrance_on_bomb_island",
+		"access_rules": [ "bombs,@can_travel_to_bomb_island",
+		                  "@can_travel_to_bomb_island,power",
+		                  "@can_travel_to_bomb_island,logic_tricked,[logic_complex],windwaker" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Access Secret Cave Entrance on Rock Spire Isle */
+	{
+		"name": "can_access_secret_cave_entrance_on_rock_spire_isle",
+		"access_rules": [ "bombs,@can_travel_to_rock_spire_isle",
+		                  "@can_fly_with_deku_leaf_outdoors,@can_travel_to_rock_spire_isle,logic_tricked,[logic_glitched]",
+		                  "@can_cut_or_slash,@can_travel_to_rock_spire_isle,logic_tricked,[logic_complex],windwaker" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Access Secret Cave Entrance on Shark Island */
+	{
+		"name": "can_access_secret_cave_entrance_on_shark_island",
+		"access_rules": [ "@can_travel_to_shark_island,boots,hammer" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Access Secret Cave Entrance on Cliff Plateau Isles */
+	{
+		"name": "can_access_secret_cave_entrance_on_cliff_plateau_isles",
+		"access_rules": [ "@can_travel_to_cliff_plateau_isles" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Access Secret Cave Entrance on Horseshoe Island */
+	{
+		"name": "can_access_secret_cave_entrance_on_horseshoe_island",
+		"access_rules": [ "@can_travel_to_horseshoe_island,leaf",
+		                  "@can_travel_to_horseshoe_island,logic_tricked,[logic_complex]" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Access Secret Cave Entrance on Star Island */
+	{
+		"name": "can_access_secret_cave_entrance_on_star_island",
+		"access_rules": [ "bombs,@can_travel_to_star_island",
+		                  "@can_travel_to_star_island,power" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Access Savage Labyrinth */
+	{
+		"name": "can_access_savage_labyrinth",
+		"access_rules": [ "@can_access_secret_cave_entrance_on_outset_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Access Dragon Roost Island Secret Cave */
+	{
+		"name": "can_access_dragon_roost_island_secret_cave",
+		"access_rules": [ "@can_access_secret_cave_entrance_on_dragon_roost_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Access Fire Mountain Secret Cave */
+	{
+		"name": "can_access_fire_mountain_secret_cave",
+		"access_rules": [ "@can_access_secret_cave_entrance_on_fire_mountain" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Access Ice Ring Isle Secret Cave */
+	{
+		"name": "can_access_ice_ring_isle_secret_cave",
+		"access_rules": [ "@can_access_secret_cave_entrance_on_ice_ring_isle" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Access Cabana Labyrinth */
+	{
+		"name": "can_access_cabana_labyrinth",
+		"access_rules": [ "@can_access_secret_cave_entrance_on_private_oasis" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Access Needle Rock Isle Secret Cave */
+	{
+		"name": "can_access_needle_rock_isle_secret_cave",
+		"access_rules": [ "@can_access_secret_cave_entrance_on_needle_rock_isle" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Access Angular Isles Secret Cave */
+	{
+		"name": "can_access_angular_isles_secret_cave",
+		"access_rules": [ "@can_access_secret_cave_entrance_on_angular_isles" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Access Boating Course Secret Cave */
+	{
+		"name": "can_access_boating_course_secret_cave",
+		"access_rules": [ "@can_access_secret_cave_entrance_on_boating_course" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Access Stone Watcher Island Secret Cave */
+	{
+		"name": "can_access_stone_watcher_island_secret_cave",
+		"access_rules": [ "@can_access_secret_cave_entrance_on_stone_watcher_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Access Overlook Island Secret Cave */
+	{
+		"name": "can_access_overlook_island_secret_cave",
+		"access_rules": [ "@can_access_secret_cave_entrance_on_overlook_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Access Bird's Peak Rock Secret Cave */
+	{
+		"name": "can_access_bird's_peak_rock_secret_cave",
+		"access_rules": [ "@can_access_secret_cave_entrance_on_bird's_peak_rock" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Access Pawprint Isle Chuchu Cave */
+	{
+		"name": "can_access_pawprint_isle_chuchu_cave",
+		"access_rules": [ "@can_access_secret_cave_entrance_on_pawprint_isle" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Access Pawprint Isle Wizzrobe Cave */
+	{
+		"name": "can_access_pawprint_isle_wizzrobe_cave",
+		"access_rules": [ "@can_access_secret_cave_entrance_on_pawprint_isle_side_isle" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Access Diamond Steppe Island Warp Maze Cave */
+	{
+		"name": "can_access_diamond_steppe_island_warp_maze_cave",
+		"access_rules": [ "@can_access_secret_cave_entrance_on_diamond_steppe_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Access Bomb Island Secret Cave */
+	{
+		"name": "can_access_bomb_island_secret_cave",
+		"access_rules": [ "@can_access_secret_cave_entrance_on_bomb_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Access Rock Spire Isle Secret Cave */
+	{
+		"name": "can_access_rock_spire_isle_secret_cave",
+		"access_rules": [ "@can_access_secret_cave_entrance_on_rock_spire_isle" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Access Shark Island Secret Cave */
+	{
+		"name": "can_access_shark_island_secret_cave",
+		"access_rules": [ "@can_access_secret_cave_entrance_on_shark_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Access Cliff Plateau Isles Secret Cave */
+	{
+		"name": "can_access_cliff_plateau_isles_secret_cave",
+		"access_rules": [ "@can_access_secret_cave_entrance_on_cliff_plateau_isles" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Access Horseshoe Island Secret Cave */
+	{
+		"name": "can_access_horseshoe_island_secret_cave",
+		"access_rules": [ "@can_access_secret_cave_entrance_on_horseshoe_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Access Star Island Secret Cave */
+	{
+		"name": "can_access_star_island_secret_cave",
+		"access_rules": [ "@can_access_secret_cave_entrance_on_star_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Get Past Forsaken Fortress Gate */
+	{
+		"name": "can_get_past_forsaken_fortress_gate",
+		"access_rules": [ "bombs,@can_travel_to_forsaken_fortress",
+		                  "@can_travel_to_forsaken_fortress,[logic_tricked]" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Get Inside Forsaken Fortress */
+	{
+		"name": "can_get_inside_forsaken_fortress",
+		"access_rules": [ "@can_get_past_forsaken_fortress_gate,hammer",
+		                  "@can_get_past_forsaken_fortress_gate,[logic_tricked],windwaker",
+		                  "@can_get_past_forsaken_fortress_gate,logic_tricked,[logic_complex]" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Reach and Defeat Phantom Ganon */
+	{
+		"name": "can_reach_and_defeat_phantom_ganon",
+		"access_rules": [ "@can_defeat_phantom_ganon,@can_get_past_forsaken_fortress_gate" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Defeat Phantom Ganon */
+	{
+		"name": "can_defeat_phantom_ganon",
+		"access_rules": [ "withsword,ms",
+		                  "swordless,hammer" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Access Hyrule */
+	{
+		"name": "can_access_hyrule",
+		"access_rules": [ "triforce_1,triforce_2,triforce_3,triforce_4,triforce_5,triforce_6,triforce_7,triforce_8" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Get Past Hyrule Barrier */
+	{
+		"name": "can_get_past_hyrule_barrier",
+		"access_rules": [ "@can_access_hyrule,ms3",
+		                  "@can_access_hyrule,swordless",
+		                  "bombs,@can_access_hyrule,logic_tricked,[logic_complex],sword,windwaker" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Access Ganon's Tower */
+	{
+		"name": "can_access_ganon's_tower",
+		"access_rules": [ "@can_get_past_hyrule_barrier,hookshot",
+		                  "@can_get_past_hyrule_barrier,leaf" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Complete Memory Dragon Roost Cavern and Gohma */
+	{
+		"name": "can_complete_memory_dragon_roost_cavern_and_gohma",
+		"access_rules": [ "@can_defeat_gohma,leaf,grapple" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Complete Memory Forbidden Woods and Kalle Demos */
+	{
+		"name": "can_complete_memory_forbidden_woods_and_kalle_demos",
+		"access_rules": [ "@can_defeat_kalle_demos,leaf" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Complete Memory Earth Temple and Jalhalla */
+	{
+		"name": "can_complete_memory_earth_temple_and_jalhalla",
+		"access_rules": [ "@can_defeat_jalhalla" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Complete Memory Wind Temple and Molgera */
+	{
+		"name": "can_complete_memory_wind_temple_and_molgera",
+		"access_rules": [ "@can_defeat_molgera,leaf" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Complete All Memory Dungeons and Bosses */
+	{
+		"name": "can_complete_all_memory_dungeons_and_bosses",
+		"access_rules": [ "@can_complete_memory_dragon_roost_cavern_and_gohma,@can_complete_memory_earth_temple_and_jalhalla,@can_complete_memory_forbidden_woods_and_kalle_demos,@can_complete_memory_wind_temple_and_molgera" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Unlock Ganon's Tower Four Boss Door */
+	{
+		"name": "can_unlock_ganon's_tower_four_boss_door",
+		"access_rules": [ "@can_complete_all_memory_dungeons_and_bosses",
+		                  "@rematch_bosses_skipped",
+		                  "bombs,logic_tricked,[logic_complex],leaf" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Reach Ganon's Tower Phantom Ganon Room */
+	{
+		"name": "can_reach_ganon's_tower_phantom_ganon_room",
+		"access_rules": [ "@can_access_ganon's_tower,@can_unlock_ganon's_tower_four_boss_door" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Reach and Defeat Puppet Ganon */
+	{
+		"name": "can_reach_and_defeat_puppet_ganon",
+		"access_rules": [ "@can_defeat_darknuts,@can_defeat_mighty_darknuts,@can_defeat_moblins,@can_defeat_puppet_ganon,@can_reach_ganon's_tower_phantom_ganon_room,lightarrow" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Defeat Puppet Ganon */
+	{
+		"name": "can_defeat_puppet_ganon",
+		"access_rules": [  ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Reach and Defeat Ganondorf */
+	{
+		"name": "can_reach_and_defeat_ganondorf",
+		"access_rules": [ "@can_defeat_ganondorf,@can_reach_and_defeat_puppet_ganon,grapple,hookshot",
+		                  "@can_defeat_ganondorf,@can_reach_and_defeat_puppet_ganon,logic_tricked,[logic_complex],grapple",
+		                  "@can_defeat_ganondorf,@can_reach_and_defeat_puppet_ganon,logic_tricked,[logic_glitched],hookshot",
+		                  "@can_defeat_ganondorf,@can_reach_and_defeat_puppet_ganon,logic_tricked,[logic_complex],logic_tricked,[logic_glitched]" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Defeat Ganondorf */
+	{
+		"name": "can_defeat_ganondorf",
+		"access_rules": [ "logic_tricked,[logic_glitched],shield,sword",
+		                  "sword,shield,swordless" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Rescued Aryll */
+	{
+		"name": "rescued_aryll",
+		"access_rules": [ "" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Rescued Tingle */
+	{
+		"name": "rescued_tingle",
+		"access_rules": [ "" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Salvage Treasure */
+	{
+		"name": "can_salvage_treasure",
+		"access_rules": [ "@can_sail,grapple" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Get Fairies */
+	{
+		"name": "can_get_fairies",
+		"access_rules": [ "@can_travel_to_northern_fairy_island",
+		                  "@can_travel_to_any_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Farm Knight's Crests */
+	{
+		"name": "Hard Combat Trial",
+		"access_rules": [ "@Earth Temple/Big Key Chest,@can_defeat_darknuts_easily,grapple,spoils",
+		                  "@Wind Temple/Big Key Chest,@can_defeat_darknuts_easily,grapple,spoils",
+		                  "@Stone Watcher Island/Easy Combat Trial,@can_defeat_darknuts_easily,grapple,spoils",
+		                  "@Overlook Island/Hard Combat Trial,@can_defeat_darknuts_easily,grapple,spoils" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Farm Joy Pendants */
+	{
+		"name": "can_farm_joy_pendants",
+		"access_rules": [ "grapple,spoils" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Farm Skull Necklaces */
+	{
+		"name": "can_farm_skull_necklaces",
+		"access_rules": [ "grapple,spoils" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Farm Golden Feathers */
+	{
+		"name": "can_farm_golden_feathers",
+		"access_rules": [ "grapple,spoils" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Farm Green Chu Jelly */
+	{
+		"name": "can_farm_green_chu_jelly",
+		"access_rules": [ "grapple,spoils" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Obtain 15 Blue Chu Jelly */
+	{
+		"name": "Highest Chest",
+		"access_rules": [ "bombs,@can_get_blue_chu_jelly_from_blue_chuchus,spoils",
+		                  "@can_get_blue_chu_jelly_from_blue_chuchus,power,spoils",
+		                  "@can_get_blue_chu_jelly_from_blue_chuchus,hookshot,spoils",
+		                  "@can_get_blue_chu_jelly_from_blue_chuchus,grapple,spoils",
+		                  "@can_get_blue_chu_jelly_from_blue_chuchus,hookshot,spoils",
+		                  "@can_access_secret_cave_entrance_on_shark_island,@can_fly_with_deku_leaf_outdoors,@can_get_blue_chu_jelly_from_blue_chuchus,spoils",
+		                  "@Cliff Plateau Isles/Highest Chest,@can_get_blue_chu_jelly_from_blue_chuchus,spoils",
+		                  "@can_get_blue_chu_jelly_from_blue_chuchus,leaf,spoils",
+		                  "@can_access_secret_cave_entrance_on_boating_course,@can_get_blue_chu_jelly_from_blue_chuchus,spoils" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Farm Lots of Rupees */
+	{
+		"name": "can_farm_lots_of_rupees",
+		"access_rules": [ "" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Defeat Bokoblins */
+	{
+		"name": "can_defeat_bokoblins",
+		"access_rules": [ "sword",
+		                  "bow",
+		                  "bombs",
+		                  "hammer" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Defeat Green Bokoblins */
+	{
+		"name": "can_defeat_green_bokoblins",
+		"access_rules": [ "@can_defeat_bokoblins" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Defeat Blue Bokoblins */
+	{
+		"name": "can_defeat_blue_bokoblins",
+		"access_rules": [ "@can_defeat_bokoblins" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Defeat Pink Bokoblins */
+	{
+		"name": "can_defeat_pink_bokoblins",
+		"access_rules": [ "@can_defeat_bokoblins" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Defeat Moblins */
+	{
+		"name": "can_defeat_moblins",
+		"access_rules": [ "sword",
+		                  "bow",
+		                  "bombs",
+		                  "hammer" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Defeat Darknuts */
+	{
+		"name": "can_defeat_darknuts",
+		"access_rules": [ "sword",
+		                  "lightarrow",
+		                  "hammer" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Defeat Darknuts Easily */
+	{
+		"name": "can_defeat_darknuts_easily",
+		"access_rules": [ "sword",
+		                  "lightarrow" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Defeat Mighty Darknuts */
+	{
+		"name": "can_defeat_mighty_darknuts",
+		"access_rules": [ "@can_defeat_darknuts_easily",
+		                  "@can_defeat_darknuts,logic_tricked,[logic_complex]" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Defeat Miniblins */
+	{
+		"name": "can_defeat_miniblins",
+		"access_rules": [ "sword",
+		                  "grapple",
+		                  "boomerang",
+		                  "bow",
+		                  "bombs",
+		                  "hammer" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Defeat Miniblins Easily */
+	{
+		"name": "can_defeat_miniblins_easily",
+		"access_rules": [ "sword",
+		                  "boomerang",
+		                  "bow",
+		                  "bombs",
+		                  "hammer" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Defeat Red ChuChus */
+	{
+		"name": "can_defeat_red_chuchus",
+		"access_rules": [ "sword",
+		                  "hammer",
+		                  "bombs",
+		                  "bow" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Defeat Green ChuChus */
+	{
+		"name": "can_defeat_green_chuchus",
+		"access_rules": [ "@can_defeat_red_chuchus" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Defeat Yellow ChuChus */
+	{
+		"name": "can_defeat_yellow_chuchus",
+		"access_rules": [ "boomerang,sword",
+		                  "bow",
+		                  "bombs",
+		                  "leaf,sword",
+		                  "hammer" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Defeat Blue ChuChus */
+	{
+		"name": "can_defeat_blue_chuchus",
+		"access_rules": [ "@can_defeat_yellow_chuchus" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Get Blue Chu Jelly from Blue ChuChus */
+	{
+		"name": "can_get_blue_chu_jelly_from_blue_chuchus",
+		"access_rules": [ "@can_defeat_blue_chuchus",
+		                  "grapple" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Defeat Dark ChuChus */
+	{
+		"name": "can_defeat_dark_chuchus",
+		"access_rules": [ "" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Defeat Keese */
+	{
+		"name": "can_defeat_keese",
+		"access_rules": [ "sword",
+		                  "hookshot",
+		                  "grapple",
+		                  "boomerang",
+		                  "bow",
+		                  "bombs",
+		                  "hammer" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Defeat Fire Keese */
+	{
+		"name": "can_defeat_fire_keese",
+		"access_rules": [ "@can_defeat_keese" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Defeat Magtails */
+	{
+		"name": "can_defeat_magtails",
+		"access_rules": [ "sword",
+		                  "hammer",
+		                  "boomerang",
+		                  "hookshot",
+		                  "bombs",
+		                  "grapple",
+		                  "bow" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Stun Magtails */
+	{
+		"name": "can_stun_magtails",
+		"access_rules": [ "sword",
+		                  "hammer",
+		                  "boomerang",
+		                  "hookshot",
+		                  "bombs",
+		                  "grapple",
+		                  "bow" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Defeat Kargarocs */
+	{
+		"name": "can_defeat_kargarocs",
+		"access_rules": [ "sword",
+		                  "boomerang",
+		                  "bow",
+		                  "hammer",
+		                  "bombs" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Defeat Peahats */
+	{
+		"name": "can_defeat_peahats",
+		"access_rules": [ "boomerang",
+		                  "hookshot,sword",
+		                  "leaf,sword",
+		                  "hammer",
+		                  "bow",
+		                  "bombs" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Remove Peahat Armor */
+	{
+		"name": "can_remove_peahat_armor",
+		"access_rules": [ "boomerang",
+		                  "hookshot",
+		                  "leaf",
+		                  "hammer",
+		                  "bow",
+		                  "bombs" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Defeat Seahats */
+	{
+		"name": "can_defeat_seahats",
+		"access_rules": [ "boomerang",
+		                  "bow",
+		                  "hookshot",
+		                  "bombs" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Defeat Boko Babas */
+	{
+		"name": "can_defeat_boko_babas",
+		"access_rules": [ "sword",
+		                  "boomerang",
+		                  "hammer",
+		                  "bow",
+		                  "hookshot",
+		                  "bombs",
+		                  "leaf,grapple" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Defeat Mothulas */
+	{
+		"name": "can_defeat_mothulas",
+		"access_rules": [ "sword",
+		                  "bow",
+		                  "bombs",
+		                  "hammer" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Defeat Winged Mothulas */
+	{
+		"name": "can_defeat_winged_mothulas",
+		"access_rules": [ "sword",
+		                  "bow",
+		                  "bombs",
+		                  "hammer" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Defeat Wizzrobes */
+	{
+		"name": "can_defeat_wizzrobes",
+		"access_rules": [ "sword",
+		                  "bow",
+		                  "hookshot",
+		                  "bombs",
+		                  "hammer" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Defeat Wizzrobes at Range */
+	{
+		"name": "can_defeat_wizzrobes_at_range",
+		"access_rules": [ "bow",
+		                  "hookshot" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Defeat Armos */
+	{
+		"name": "can_defeat_armos",
+		"access_rules": [ "sword",
+		                  "bow",
+		                  "bombs",
+		                  "hammer",
+		                  "hookshot" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Defeat Armos Knights */
+	{
+		"name": "can_defeat_armos_knights",
+		"access_rules": [ "bombs",
+		                  "lightarrow" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Defeat Big Octos */
+	{
+		"name": "can_defeat_big_octos",
+		"access_rules": [ "bow",
+		                  "bombs",
+		                  "boomerang" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Defeat Twelve-Eye Octos */
+	{
+		"name": "can_defeat_twelve-eye_octos",
+		"access_rules": [ "lightarrow",
+		                  "bombs",
+		                  "boomerang",
+		                  "logic_tricked,[logic_complex],bow" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Defeat Red Bubbles */
+	{
+		"name": "can_defeat_red_bubbles",
+		"access_rules": [ "sword",
+		                  "hammer",
+		                  "bow",
+		                  "bombs",
+		                  "leaf,grapple",
+		                  "grapple,hookshot" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Defeat Blue Bubbles */
+	{
+		"name": "can_defeat_blue_bubbles",
+		"access_rules": [ "firearrowicearrow",
+		                  "bombs",
+		                  "leaf,sword",
+		                  "leaf,bow",
+		                  "leaf,grapple",
+		                  "leaf,hammer",
+		                  "hookshot,sword",
+		                  "hookshot,bow",
+		                  "grapple,hookshot",
+		                  "hookshot,hammer" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Defeat ReDeads */
+	{
+		"name": "can_defeat_redeads",
+		"access_rules": [ "sword",
+		                  "lightarrow",
+		                  "hammer",
+		                  "bombs" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Defeat Poes */
+	{
+		"name": "can_defeat_poes",
+		"access_rules": [ "" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Defeat Poes Without Light Ray */
+	{
+		"name": "can_defeat_poes_without_light_ray",
+		"access_rules": [ "sword",
+		                  "bow",
+		                  "boomerang",
+		                  "hookshot",
+		                  "hammer",
+		                  "grapple",
+		                  "bombs" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Defeat Jalhalla Poes */
+	{
+		"name": "can_defeat_jalhalla_poes",
+		"access_rules": [ "sword",
+		                  "bow",
+		                  "bombs",
+		                  "hammer" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Defeat Stalfos */
+	{
+		"name": "can_defeat_stalfos",
+		"access_rules": [ "sword",
+		                  "bombs",
+		                  "hammer",
+		                  "lightarrow" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Defeat Floormasters */
+	{
+		"name": "can_defeat_floormasters",
+		"access_rules": [ "sword",
+		                  "bow" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Defeat Morths */
+	{
+		"name": "can_defeat_morths",
+		"access_rules": [ "sword",
+		                  "boomerang",
+		                  "bow",
+		                  "hookshot" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Defeat Rats */
+	{
+		"name": "can_defeat_rats",
+		"access_rules": [ "sword",
+		                  "bow",
+		                  "bombs",
+		                  "boomerang",
+		                  "hammer",
+		                  "grapple" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Defeat Bombchus */
+	{
+		"name": "can_defeat_bombchus",
+		"access_rules": [ "sword",
+		                  "bow",
+		                  "boomerang",
+		                  "hammer",
+		                  "grapple" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Cut Down Dexivines */
+	{
+		"name": "can_cut_down_dexivines",
+		"access_rules": [ "sword",
+		                  "bow",
+		                  "bombs",
+		                  "boomerang",
+		                  "hammer",
+		                  "grapple",
+		                  "hookshot" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Defeat Dexivines */
+	{
+		"name": "can_defeat_dexivines",
+		"access_rules": [ "hookshot" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Defeat Freshwater Octoroks */
+	{
+		"name": "can_defeat_freshwater_octoroks",
+		"access_rules": [ "bow",
+		                  "boomerang",
+		                  "hookshot" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Defeat Saltwater Octoroks */
+	{
+		"name": "can_defeat_saltwater_octoroks",
+		"access_rules": [ "bow",
+		                  "boomerang",
+		                  "hookshot" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Defeat Beamos */
+	{
+		"name": "can_defeat_beamos",
+		"access_rules": [ "" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Defeat Gyorgs */
+	{
+		"name": "can_defeat_gyorgs",
+		"access_rules": [ "boomerang",
+		                  "bow",
+		                  "hookshot" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Defeat Gohma */
+	{
+		"name": "can_defeat_gohma",
+		"access_rules": [ "grapple" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Defeat Kalle Demos */
+	{
+		"name": "can_defeat_kalle_demos",
+		"access_rules": [ "boomerang",
+		                  "bombs,[logic_tricked]",
+		                  "bow,[logic_tricked]" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Defeat Gohdan */
+	{
+		"name": "can_defeat_gohdan",
+		"access_rules": [ "bombs,bow",
+		                  "bombs,hookshot" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Defeat Helmaroc King */
+	{
+		"name": "can_defeat_helmaroc_king",
+		"access_rules": [ "hammer" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Defeat Jalhalla */
+	{
+		"name": "can_defeat_jalhalla",
+		"access_rules": [ "@can_defeat_jalhalla_poes,mirror,power,sword",
+		                  "@can_defeat_jalhalla_poes,mirror,power,windwaker",
+		                  "@can_defeat_jalhalla_poes,grapple,mirror,power",
+		                  "boomerang,@can_defeat_jalhalla_poes,mirror,power",
+		                  "@can_defeat_jalhalla_poes,leaf,mirror,power",
+		                  "@can_defeat_jalhalla_poes,mirror,power,bow",
+		                  "@can_defeat_jalhalla_poes,hookshot,mirror,power",
+		                  "@can_defeat_jalhalla_poes,power,lightarrow" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Defeat Molgera */
+	{
+		"name": "can_defeat_molgera",
+		"access_rules": [ "hookshot,sword",
+		                  "hookshot,bow",
+		                  "boomerang,hookshot",
+		                  "grapple,hookshot",
+		                  "hookshot,hammer",
+		                  "bombs,hookshot" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Destroy Cannons */
+	{
+		"name": "can_destroy_cannons",
+		"access_rules": [ "bombs",
+		                  "boomerang" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Cut Down Outset Trees */
+	{
+		"name": "can_cut_down_outset_trees",
+		"access_rules": [ "sword",
+		                  "boomerang",
+		                  "hammer" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Cut Down Hanging DRC Platform */
+	{
+		"name": "can_cut_down_hanging_drc_platform",
+		"access_rules": [ "sword",
+		                  "bombs",
+		                  "bow",
+		                  "hammer" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Cut Grass */
+	{
+		"name": "can_cut_grass",
+		"access_rules": [ "sword",
+		                  "hammer",
+		                  "boomerang",
+		                  "bombs" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Sword Fight with Orca */
+	{
+		"name": "can_sword_fight_with_orca",
+		"access_rules": [ "bombs,sword",
+		                  "sword,swordless" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Chart for Island 1 */
+	{
+		"name": "chart_for_island_1",
+		"access_rules": [ "swordless" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Chart for Island 2 */
+	{
+		"name": "chart_for_island_2",
+		"access_rules": [ "swordless" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Chart for Island 3 */
+	{
+		"name": "chart_for_island_3",
+		"access_rules": [ "swordless" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Chart for Island 4 */
+	{
+		"name": "chart_for_island_4",
+		"access_rules": [ "wallet,wallet" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Chart for Island 5 */
+	{
+		"name": "chart_for_island_5",
+		"access_rules": [ "wallet" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Chart for Island 6 */
+	{
+		"name": "chart_for_island_6",
+		"access_rules": [ "wallet,wallet" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Chart for Island 7 */
+	{
+		"name": "chart_for_island_7",
+		"access_rules": [ "wallet" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Chart for Island 8 */
+	{
+		"name": "chart_for_island_8",
+		"access_rules": [ "wallet" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Chart for Island 9 */
+	{
+		"name": "chart_for_island_9",
+		"access_rules": [ "wallet" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Chart for Island 10 */
+	{
+		"name": "chart_for_island_10",
+		"access_rules": [ "wallet" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Chart for Island 11 */
+	{
+		"name": "chart_for_island_11",
+		"access_rules": [ "wallet" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Chart for Island 12 */
+	{
+		"name": "chart_for_island_12",
+		"access_rules": [ "wallet" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Chart for Island 13 */
+	{
+		"name": "chart_for_island_13",
+		"access_rules": [ "wallet" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Chart for Island 14 */
+	{
+		"name": "chart_for_island_14",
+		"access_rules": [ "wallet" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Chart for Island 15 */
+	{
+		"name": "chart_for_island_15",
+		"access_rules": [ "wallet" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Chart for Island 16 */
+	{
+		"name": "chart_for_island_16",
+		"access_rules": [ "wallet" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Chart for Island 17 */
+	{
+		"name": "chart_for_island_17",
+		"access_rules": [ "wallet" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Chart for Island 18 */
+	{
+		"name": "chart_for_island_18",
+		"access_rules": [ "wallet" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Chart for Island 19 */
+	{
+		"name": "chart_for_island_19",
+		"access_rules": [ "wallet" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Chart for Island 20 */
+	{
+		"name": "chart_for_island_20",
+		"access_rules": [ "wallet" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Chart for Island 21 */
+	{
+		"name": "chart_for_island_21",
+		"access_rules": [ "wallet" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Chart for Island 22 */
+	{
+		"name": "chart_for_island_22",
+		"access_rules": [ "wallet" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Chart for Island 23 */
+	{
+		"name": "chart_for_island_23",
+		"access_rules": [ "wallet,wallet" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Chart for Island 24 */
+	{
+		"name": "chart_for_island_24",
+		"access_rules": [ "wallet" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Chart for Island 25 */
+	{
+		"name": "chart_for_island_25",
+		"access_rules": [ "wallet" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Chart for Island 26 */
+	{
+		"name": "chart_for_island_26",
+		"access_rules": [ "wallet" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Chart for Island 27 */
+	{
+		"name": "chart_for_island_27",
+		"access_rules": [ "wallet" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Chart for Island 28 */
+	{
+		"name": "chart_for_island_28",
+		"access_rules": [ "wallet" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Chart for Island 29 */
+	{
+		"name": "chart_for_island_29",
+		"access_rules": [ "wallet" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Chart for Island 30 */
+	{
+		"name": "chart_for_island_30",
+		"access_rules": [ "wallet" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Chart for Island 31 */
+	{
+		"name": "chart_for_island_31",
+		"access_rules": [ "wallet,wallet" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Chart for Island 32 */
+	{
+		"name": "chart_for_island_32",
+		"access_rules": [ "wallet,wallet" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Chart for Island 33 */
+	{
+		"name": "chart_for_island_33",
+		"access_rules": [ "wallet" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Chart for Island 34 */
+	{
+		"name": "chart_for_island_34",
+		"access_rules": [ "wallet" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Chart for Island 35 */
+	{
+		"name": "chart_for_island_35",
+		"access_rules": [ "wallet" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Chart for Island 36 */
+	{
+		"name": "chart_for_island_36",
+		"access_rules": [ "wallet" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Chart for Island 37 */
+	{
+		"name": "chart_for_island_37",
+		"access_rules": [ "wallet" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Chart for Island 38 */
+	{
+		"name": "chart_for_island_38",
+		"access_rules": [ "wallet" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Chart for Island 39 */
+	{
+		"name": "chart_for_island_39",
+		"access_rules": [ "wallet" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Chart for Island 40 */
+	{
+		"name": "chart_for_island_40",
+		"access_rules": [ "wallet" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Chart for Island 41 */
+	{
+		"name": "chart_for_island_41",
+		"access_rules": [ "wallet" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Chart for Island 42 */
+	{
+		"name": "chart_for_island_42",
+		"access_rules": [ "wallet,wallet" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Chart for Island 43 */
+	{
+		"name": "chart_for_island_43",
+		"access_rules": [ "wallet" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Chart for Island 44 */
+	{
+		"name": "chart_for_island_44",
+		"access_rules": [ "wallet,wallet" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Chart for Island 45 */
+	{
+		"name": "chart_for_island_45",
+		"access_rules": [ "wallet" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Chart for Island 46 */
+	{
+		"name": "chart_for_island_46",
+		"access_rules": [ "wallet,wallet" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Chart for Island 47 */
+	{
+		"name": "chart_for_island_47",
+		"access_rules": [ "wallet" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Chart for Island 48 */
+	{
+		"name": "chart_for_island_48",
+		"access_rules": [ "wallet" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Chart for Island 49 */
+	{
+		"name": "chart_for_island_49",
+		"access_rules": [ "wallet" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Rematch Bosses Skipped */
+	{
+		"name": "rematch_bosses_skipped",
+		"access_rules": [ "wallet" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Not Secret Cave Entrance Rando */
+	{
+		"name": "not_secret_cave_entrance_rando",
+		"access_rules": [ "wallet",
+		                  "wallet" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can DRC Backward */
+	{
+		"name": "can_drc_backward",
+		"access_rules": [ "drc_key:2,logic_tricked,[logic_glitched],bow",
+		                  "bombs,@can_cut_or_slash,logic_tricked,[logic_complex],drc_key:2,logic_tricked,[logic_glitched]" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Burn Pallet Door */
+	{
+		"name": "can_burn_pallet_door",
+		"access_rules": [ "bombs,logic_tricked,[logic_glitched]",
+		                  "logic_tricked,[logic_glitched],firearrowicearrow" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Spring Storage */
+	{
+		"name": "can_spring_storage",
+		"access_rules": [ "logic_tricked,[logic_complex],hookshot,boots" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Door Cancel */
+	{
+		"name": "can_door_cancel",
+		"access_rules": [ "windwaker" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Play Fish Minigame */
+	{
+		"name": "can_play_fish_minigame",
+		"access_rules": [ "baitbag,@can_sail,@hero's_bow" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Get DRI Boulder Chest */
+	{
+		"name": "can_get_dri_boulder_chest",
+		"access_rules": [ "bow",
+		                  "baitbag",
+		                  "boomerang",
+		                  "bombs",
+		                  "@can_cut_or_slash,leaf,logic_tricked,[logic_glitched],windwaker,requiem" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Sail */
+	{
+		"name": "can_sail",
+		"access_rules": [ "sail,sail" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Travel to any Island */
+	{
+		"name": "can_travel_to_any_island",
+		"access_rules": [ "@can_play_ballad_of_gales,@can_sail",
+		                  "logic_tricked,[logic_complex]" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Travel to Mother Isle */
+	{
+		"name": "can_travel_to_mother_isle",
+		"access_rules": [ "@can_play_ballad_of_gales" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Travel to Windfall Island Warp */
+	{
+		"name": "can_travel_to_windfall_island_warp",
+		"access_rules": [ "@can_play_ballad_of_gales" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Travel to Tingle Island Warp */
+	{
+		"name": "can_travel_to_tingle_island_warp",
+		"access_rules": [ "@can_play_ballad_of_gales" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Travel to Greatfish Isle Warp */
+	{
+		"name": "can_travel_to_greatfish_isle_warp",
+		"access_rules": [ "@can_play_ballad_of_gales" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Travel to Forsaken Fortress */
+	{
+		"name": "can_travel_to_forsaken_fortress",
+		"access_rules": [ "@can_play_ballad_of_gales" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Travel to Windfall Island */
+	{
+		"name": "can_travel_to_windfall_island",
+		"access_rules": [ "@can_travel_to_windfall_island_warp",
+		                  "@can_sail,@can_travel_to_tingle_island_warp",
+		                  "@can_travel_to_any_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Travel to Dragon Roost Island */
+	{
+		"name": "can_travel_to_dragon_roost_island",
+		"access_rules": [ "@can_play_ballad_of_gales" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Travel to Tingle Island */
+	{
+		"name": "can_travel_to_tingle_island",
+		"access_rules": [ "@can_travel_to_tingle_island_warp",
+		                  "@can_sail,@can_travel_to_greatfish_isle_warp",
+		                  "@can_sail,@can_travel_to_windfall_island_warp",
+		                  "@can_travel_to_any_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Travel to Greatfish Isle */
+	{
+		"name": "can_travel_to_greatfish_isle",
+		"access_rules": [ "@can_travel_to_greatfish_isle_warp",
+		                  "@can_sail,@can_travel_to_tingle_island_warp",
+		                  "@can_travel_to_any_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Travel to Tower of the Gods */
+	{
+		"name": "can_travel_to_tower_of_the_gods",
+		"access_rules": [ "@can_play_ballad_of_gales" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Travel to Southern Fairy Island */
+	{
+		"name": "can_travel_to_southern_fairy_island",
+		"access_rules": [ "@can_play_ballad_of_gales" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Travel to Forest Haven */
+	{
+		"name": "can_travel_to_forest_haven",
+		"access_rules": [ "@can_play_ballad_of_gales" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Travel to Star Island */
+	{
+		"name": "can_travel_to_star_island",
+		"access_rules": [ "@can_sail,@can_travel_to_forsaken_fortress",
+		                  "@can_travel_to_any_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Travel to Northern Fairy Island */
+	{
+		"name": "can_travel_to_northern_fairy_island",
+		"access_rules": [ "@can_sail,@can_travel_to_windfall_island",
+		                  "@can_travel_to_any_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Travel to Northern Fairy Island Sub */
+	{
+		"name": "can_travel_to_northern_fairy_island_sub",
+		"access_rules": [ "@can_sail,@can_travel_to_northern_fairy_island",
+		                  "@can_travel_to_any_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Travel to Gale Isle */
+	{
+		"name": "can_travel_to_gale_isle",
+		"access_rules": [ "@can_sail,@can_travel_to_windfall_island",
+		                  "@can_travel_to_any_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Travel to Crescent Moon Island */
+	{
+		"name": "can_travel_to_crescent_moon_island",
+		"access_rules": [ "@can_sail,@can_travel_to_windfall_island",
+		                  "@can_sail,@can_travel_to_dragon_roost_island",
+		                  "@can_travel_to_any_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Travel to Crescent Moon Island Sub */
+	{
+		"name": "can_travel_to_crescent_moon_island_sub",
+		"access_rules": [ "@can_sail,@can_travel_to_crescent_moon_island",
+		                  "@can_travel_to_any_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Travel to Seven-Star Isles */
+	{
+		"name": "can_travel_to_seven-star_isles",
+		"access_rules": [ "@can_sail,@can_travel_to_dragon_roost_island",
+		                  "@can_travel_to_any_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Travel to Overlook Island */
+	{
+		"name": "can_travel_to_overlook_island",
+		"access_rules": [ "@can_sail,@can_travel_to_dragon_roost_island",
+		                  "@can_travel_to_any_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Travel to Four-Eye Reef */
+	{
+		"name": "can_travel_to_four-eye_reef",
+		"access_rules": [ "@can_sail,@can_travel_to_forsaken_fortress",
+		                  "@can_travel_to_any_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Travel to Child Isle */
+	{
+		"name": "can_travel_to_child_isle",
+		"access_rules": [ "@can_sail,@can_travel_to_forsaken_fortress",
+		                  "@can_sail,@can_travel_to_tingle_island",
+		                  "@can_travel_to_any_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Travel to Spectacle Island */
+	{
+		"name": "can_travel_to_spectacle_island",
+		"access_rules": [ "@can_sail,@can_travel_to_windfall_island",
+		                  "@can_sail,@can_travel_to_tingle_island",
+		                  "@can_travel_to_any_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Travel to Pawprint Isle */
+	{
+		"name": "can_travel_to_pawprint_isle",
+		"access_rules": [ "@can_sail,@can_travel_to_windfall_island",
+		                  "@can_sail,@can_travel_to_dragon_roost_island",
+		                  "@can_travel_to_any_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Travel to Flight Control Platform */
+	{
+		"name": "can_travel_to_flight_control_platform",
+		"access_rules": [ "@can_sail,@can_travel_to_dragon_roost_island",
+		                  "@can_travel_to_any_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Travel to Flight Control Platform Sub */
+	{
+		"name": "can_travel_to_flight_control_platform_sub",
+		"access_rules": [ "@can_sail,@can_travel_to_flight_control_platform",
+		                  "@can_travel_to_any_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Travel to Western Fairy Island */
+	{
+		"name": "can_travel_to_western_fairy_island",
+		"access_rules": [ "@can_sail,@can_travel_to_greatfish_isle",
+		                  "@can_travel_to_any_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Travel to Rock Spire Isle */
+	{
+		"name": "can_travel_to_rock_spire_isle",
+		"access_rules": [ "@can_sail,@can_travel_to_greatfish_isle",
+		                  "@can_sail,@can_travel_to_tingle_island",
+		                  "@can_travel_to_any_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Travel to Northern Triangle Island */
+	{
+		"name": "can_travel_to_northern_triangle_island",
+		"access_rules": [ "@can_sail,@can_travel_to_windfall_island",
+		                  "@can_sail,@can_travel_to_tingle_island",
+		                  "@can_sail,@can_travel_to_tower_of_the_gods",
+		                  "@can_travel_to_any_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Travel to Eastern Fairy Island */
+	{
+		"name": "can_travel_to_eastern_fairy_island",
+		"access_rules": [ "@can_sail,@can_travel_to_windfall_island",
+		                  "@can_sail,@can_travel_to_dragon_roost_island",
+		                  "@can_sail,@can_travel_to_tower_of_the_gods",
+		                  "@can_travel_to_any_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Travel to Fire Mountain */
+	{
+		"name": "can_travel_to_fire_mountain",
+		"access_rules": [ "@can_sail,@can_travel_to_dragon_roost_island",
+		                  "@can_sail,@can_travel_to_tower_of_the_gods",
+		                  "@can_travel_to_any_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Travel to Star Belt Archipelago */
+	{
+		"name": "can_travel_to_star_belt_archipelago",
+		"access_rules": [ "@can_sail,@can_travel_to_dragon_roost_island",
+		                  "@can_travel_to_any_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Travel to Three-Eye Reef */
+	{
+		"name": "can_travel_to_three-eye_reef",
+		"access_rules": [ "@can_sail,@can_travel_to_greatfish_isle",
+		                  "@can_travel_to_any_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Travel to Cyclops Reef */
+	{
+		"name": "can_travel_to_cyclops_reef",
+		"access_rules": [ "@can_sail,@can_travel_to_greatfish_isle",
+		                  "@can_sail,@can_travel_to_tingle_island",
+		                  "@can_travel_to_any_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Travel to Six-Eye Reef */
+	{
+		"name": "can_travel_to_six-eye_reef",
+		"access_rules": [ "@can_sail,@can_travel_to_tower_of_the_gods",
+		                  "@can_travel_to_any_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Travel to Eastern Triangle Island */
+	{
+		"name": "can_travel_to_eastern_triangle_island",
+		"access_rules": [ "@can_sail,@can_travel_to_tower_of_the_gods",
+		                  "@can_travel_to_any_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Travel to Thorned Fairy Island */
+	{
+		"name": "can_travel_to_thorned_fairy_island",
+		"access_rules": [ "@can_travel_to_any_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Travel to Needle Rock Isle */
+	{
+		"name": "can_travel_to_needle_rock_isle",
+		"access_rules": [ "@can_sail,@can_travel_to_greatfish_isle",
+		                  "@can_travel_to_any_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Travel to Islet of Steel */
+	{
+		"name": "can_travel_to_islet_of_steel",
+		"access_rules": [ "@can_sail,@can_travel_to_greatfish_isle",
+		                  "@can_travel_to_any_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Travel to Stone Watcher Island */
+	{
+		"name": "can_travel_to_stone_watcher_island",
+		"access_rules": [ "@can_sail,@can_travel_to_greatfish_isle",
+		                  "@can_sail,@can_travel_to_southern_fairy_island",
+		                  "@can_travel_to_any_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Travel to Southern Triangle Island */
+	{
+		"name": "can_travel_to_southern_triangle_island",
+		"access_rules": [ "@can_sail,@can_travel_to_tower_of_the_gods",
+		                  "@can_sail,@can_travel_to_southern_fairy_island",
+		                  "@can_travel_to_any_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Travel to Private Oasis */
+	{
+		"name": "can_travel_to_private_oasis",
+		"access_rules": [ "@can_sail,@can_travel_to_tower_of_the_gods",
+		                  "@can_sail,@can_travel_to_southern_fairy_island",
+		                  "@can_sail,@can_travel_to_forest_haven",
+		                  "@can_travel_to_any_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Travel to Bomb Island */
+	{
+		"name": "can_travel_to_bomb_island",
+		"access_rules": [ "@can_sail,@can_travel_to_tower_of_the_gods",
+		                  "@can_sail,@can_travel_to_forest_haven",
+		                  "@can_travel_to_any_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Travel to Bomb Island Sub */
+	{
+		"name": "can_travel_to_bomb_island_sub",
+		"access_rules": [ "@can_sail,@can_travel_to_bomb_island",
+		                  "@can_travel_to_any_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Travel to Bird's Peak Rock */
+	{
+		"name": "can_travel_to_bird's_peak_rock",
+		"access_rules": [ "@can_sail,@can_travel_to_tower_of_the_gods",
+		                  "@can_sail,@can_travel_to_forest_haven",
+		                  "@can_travel_to_any_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Travel to Diamond Steppe Island */
+	{
+		"name": "can_travel_to_diamond_steppe_island",
+		"access_rules": [ "@can_sail,@can_sail",
+		                  "@can_travel_to_any_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Travel to Five-Eye Reef */
+	{
+		"name": "can_travel_to_five-eye_reef",
+		"access_rules": [ "@can_sail,@can_sail",
+		                  "@can_travel_to_any_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Travel to Shark Island */
+	{
+		"name": "can_travel_to_shark_island",
+		"access_rules": [ "@can_sail,@can_sail",
+		                  "@can_sail,@can_travel_to_southern_fairy_island",
+		                  "@can_travel_to_any_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Travel to Ice Ring Isle */
+	{
+		"name": "can_travel_to_ice_ring_isle",
+		"access_rules": [ "@can_sail,@can_travel_to_forest_haven",
+		                  "@can_sail,@can_travel_to_southern_fairy_island",
+		                  "@can_travel_to_any_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Travel to Cliff Plateau Isles */
+	{
+		"name": "can_travel_to_cliff_plateau_isles",
+		"access_rules": [ "@can_sail,@can_travel_to_forest_haven",
+		                  "@can_travel_to_any_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Travel to Horseshoe Island */
+	{
+		"name": "can_travel_to_horseshoe_island",
+		"access_rules": [ "@can_sail,@can_sail",
+		                  "@can_travel_to_any_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Travel to Headstone Island */
+	{
+		"name": "can_travel_to_headstone_island",
+		"access_rules": [ "@can_sail,@can_sail",
+		                  "@can_sail,@can_travel_to_southern_fairy_island",
+		                  "@can_travel_to_any_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Travel to Headstone Island Sub */
+	{
+		"name": "can_travel_to_headstone_island_sub",
+		"access_rules": [ "@can_sail,@can_travel_to_headstone_island",
+		                  "@can_travel_to_any_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Travel to Two-Eye Reef */
+	{
+		"name": "can_travel_to_two-eye_reef",
+		"access_rules": [ "@can_sail,@can_travel_to_southern_fairy_island",
+		                  "@can_travel_to_any_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Travel to Angular Isles */
+	{
+		"name": "can_travel_to_angular_isles",
+		"access_rules": [ "@can_sail,@can_travel_to_forest_haven",
+		                  "@can_sail,@can_travel_to_southern_fairy_island",
+		                  "@can_travel_to_any_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Travel to Boating Course */
+	{
+		"name": "can_travel_to_boating_course",
+		"access_rules": [ "@can_sail,@can_travel_to_forest_haven",
+		                  "@can_travel_to_any_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Travel to Five-Star Isles */
+	{
+		"name": "can_travel_to_five-star_isles",
+		"access_rules": [ "@can_sail,@can_travel_to_forest_haven",
+		                  "@can_travel_to_any_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Travel to Five-Star Isles Sub */
+	{
+		"name": "can_travel_to_five-star_isles_sub",
+		"access_rules": [ "@can_sail,@can_travel_to_five-star_isles",
+		                  "@can_travel_to_any_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+	/* Can Travel to Postbox */
+	{
+		"name": "can_travel_to_postbox",
+		"access_rules": [ "@can_travel_to_bird's_peak_rock",
+		                  "@can_travel_to_bomb_island",
+		                  "@can_travel_to_cliff_plateau_isles",
+		                  "@can_travel_to_dragon_roost_island",
+		                  "@can_travel_to_eastern_fairy_island",
+		                  "@can_travel_to_flight_control_platform",
+		                  "@can_travel_to_forest_haven",
+		                  "@can_travel_to_needle_rock_isle",
+		                  "@can_travel_to_northern_fairy_island",
+		                  "@can_travel_to_northern_fairy_island",
+		                  "@can_travel_to_pawprint_isle",
+		                  "@can_travel_to_private_oasis",
+		                  "@can_travel_to_southern_fairy_island",
+		                  "@can_travel_to_spectacle_island",
+		                  "@can_travel_to_stone_watcher_island",
+		                  "@can_travel_to_thorned_fairy_island",
+		                  "@can_travel_to_tingle_island",
+		                  "@can_travel_to_western_fairy_island",
+		                  "@can_travel_to_windfall_island" ],
+		"sections": [{ "name": "access", "item_count": 1 }]
+	},
+//Groups
+
+	/* {group} */
+	{open}
+		"name"         : "{name}",
+		"sections"     : [{sections}],
+		"map_locations": [{location}]{add}
+	{close},
+]
+/* template
+	{
+		"name": "",
+		"access_rules": [ "" ],
+		"sections": [
+			{
+				"name": "",
+				"item_count": 1,
+				"access_rules": [ "" ]
+			},
+		],
+		"map_locations": [
+			{
+				"map": "map",
+				"x": 0,
+				"y": 0
+			}
+		]
+	},
+*/

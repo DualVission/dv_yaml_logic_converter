@@ -1,0 +1,151 @@
+Nothing: \\
+
+Wind Waker: windwaker
+Grappling Hook: grapple
+Boomerang: boomerang
+Hookshot: hookshot
+
+Triforce Shard 1: triforce_1
+Triforce Shard 2: triforce_2
+Triforce Shard 3: triforce_3
+Triforce Shard 4: triforce_4
+Triforce Shard 5: triforce_5
+Triforce Shard 6: triforce_6
+Triforce Shard 7: triforce_7
+Triforce Shard 8: triforce_8
+
+Wind's Requiem: requiem
+Ballad of Gales: ballad
+
+Boat's Sail: sail
+Swift Sail: swift
+
+
+Progressive Sword x1: sword
+Progressive Sword x2: ms
+Progressive Sword x3: ms2
+Progressive Sword x4: ms3
+Hero's Sword: sword
+Any Master Sword: ms2
+Full Power Master Sword: ms4
+
+Progressive Bow x1: bow
+Progressive Bow x2: firearrowicearrow
+Progressive Bow x3: lightarrow
+
+
+
+Tingle Tuner: tuner
+
+Spoils Bag: spoils
+Power Bracelets: power
+Iron Boots: boots
+Bait Bag: baitbag
+Delivery Bag: delivery
+Bombs: bombs
+Skull Hammer: hammer
+Deku Leaf: leaf
+Progressive Shield x1: shield
+Progressive Shield x2: mirror
+Hero's Shield: shield
+Mirror Shield: mirror
+
+Nayru's Pearl: nayru
+Din's Pearl: din
+Farore's Pearl: farore
+
+Command Melody: command
+Earth God's Lyric: lyric
+Wind God's Aria: aria
+Song of Passing: passing
+
+Note to Mom: momletter
+Maggie's Letter: magletter
+Moblin's Letter: moeletter
+Cabana Deed: deed
+
+Dragon Tingle Statue: statue5
+Forbidden Tingle Statue: statue5
+Goddess Tingle Statue: statue5
+Earth Tingle Statue: statue5
+Wind Tingle Statue: statue5
+
+Magic Meter Upgrade: double
+Ghost Ship Chart: gschart
+
+
+Progressive Wallet x1: wallet
+Progressive Wallet x2: wallet2
+Any Wallet Upgrade: wallet
+
+Progressive Picto Box x1: pic1
+Progressive Picto Box x2: pic2
+Picto Box: pic1
+Deluxe Picto Box: pic2
+
+Empty Bottle: bottle
+Empty Bottle x1: bottle
+Empty Bottle x2: bottle
+Empty Bottle x3: bottle
+Empty Bottle x4: bottle
+
+
+
+Telescope: telescope
+Magic Armor: armor
+#Hero's Charm:
+
+#Fill-up Coupon: fsfuc
+
+#Progressive Bomb Bag x0:
+#Progressive Quiver x0:
+
+#Submarine Chart:
+#Beedle's Chart:
+#Platform Chart:
+#Light Ring Chart:
+#Secret Cave Chart:
+#Great Fairy Chart:
+#Octo Chart:
+#Tingle's Chart:
+
+DRC Big Key: drc_bk
+FW Big Key: fw_bk
+TotG Big Key: totg_bk
+ET Big Key: et_bk
+WT Big Key: wt_bk
+
+
+DRC Small Key: drc_key:1
+DRC Small Key x1: drc_key:1
+DRC Small Key x2: drc_key:2
+DRC Small Key x3: drc_key:3
+DRC Small Key x4: drc_key:4
+
+
+FW Small Key: fw_key:1
+FW Small Key x1: fw_key:1
+
+
+TotG Small Key: totg_key:1
+TotG Small Key x1: totg_key:1
+TotG Small Key x2: totg_key:2
+
+
+ET Small Key: et_key:1
+ET Small Key x1: et_key:1
+ET Small Key x2: et_key:2
+ET Small Key x3: et_key:3
+
+
+WT Small Key: wt_key:1
+WT Small Key x1: wt_key:1
+WT Small Key x2: wt_key:2
+
+Tricked Logic: \\[logic_tricked]
+Glitched Logic: logic_tricked,[logic_glitched]
+Complex Logic: logic_tricked,[logic_complex]
+No Logic: logic_complex,[logic_no]
+
+Outside Swordless Mode: withsword
+In Swordless Mode: swordless

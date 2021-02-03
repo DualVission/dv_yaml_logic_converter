@@ -1,0 +1,1027 @@
+Outset Island:
+  Tags: Custom Groups
+  Groups:
+    Outset Island:
+      Checks:
+        Underneath Link's House:
+        Mesa the Grasscutter's House:
+        Orca - Give 10 Knight's Crests: Give Orca 10 Knight's Crests
+        Orca - Hit 500 Times: Orca 500 Hits
+        Great Fairy:
+        Jabun's Cave:
+        Dig up Black Soil: Black Soil
+      Location:
+        Map: map
+        x: 233
+        y: 983
+    Savage Labyrinth:
+      Checks:
+        Savage Labyrinth - Floor 30: Floor 30
+        Savage Labyrinth - Floor 50: Floor 50
+      Location:
+        Map: map
+        x: 198
+        y: 975
+
+Windfall Island:
+  Tags: Custom Groups, Color
+  Groups:
+    Windfall Short Sidequests:
+      Checks:
+        Ivan - Catch Killer Bees: Ivan the Killer Bee
+        Mrs. Marie - Catch Killer Bees: Mrs. Marie the Teacher
+        Mila - Follow the Thief: Mila the Theif
+        Maggie - Free Item: Maggie the Lover's Free Gift
+        Maggie - Delivery Reward: Maggie the Bride of Moe
+        Cafe Bar - Postman: Ilari the Postman
+        Kreeb - Light Up Lighthouse: Kreeb the Windmill Keep
+        Transparent Chest: Transparent Chest
+        Lenzo's House - *: Lenzo's Balcony
+        Pompie and Vera - Secret Meeting Photo: Pompie and Vera the Gossips
+        Minenco - Miss Windfall Photo: Minenco the former Miss Windfall
+      Color: khaki
+      Location:
+        Map: map
+        x: 505
+        y: 226
+    Windfall Long Sidequests and Spoils:
+      Checks:
+        Lenzo's House - Become Lenzo's Assistant: Lenzo the Photographer
+        Lenzo's House - Bring Forest Firefly: Lenzo the Picto Technician
+        Linda and Anton: Linda & Anton the Couple
+        Zunari - Stock Exotic Flower in Zunari's Shop: Zunari the Trader
+        Sam - Decorate the Town: Sam the Content
+        Kane - *: Kane the Decorator
+        Kamo - Full Moon Photo: Kamo the former Sailor
+        Chu Jelly Juice Shop - Give 15 Green Chu Jelly: 15 Green Chu Jelly
+        Chu Jelly Juice Shop - Give 15 Blue Chu Jelly: 15 Blue Chu Jelly
+        Mrs. Marie - Give 1 Joy Pendant: 1 Joy Pendant
+        Mrs. Marie - Give 21 Joy Pendants: 21 Joy Pendants
+        Mrs. Marie - Give 40 Joy Pendants: 40 Joy Pendants
+        Maggie's Father - Give 20 Skull Necklaces: 20 Skull Necklaces
+      Color: olive
+      Location:
+        Map: map
+        x: 505
+        y: 246
+    Windfall Miscellaneous:
+      Checks:
+        Tott - Teach Rhythm: Tott the Dancer
+        Jail - Tingle - *: Tingle the Prisoner
+        Jail - Maze Chest: Jail Maze
+        House of Wealth Chest:
+        Pirate Ship:
+        5 Rupee Auction:
+        40 Rupee Auction:
+        60 Rupee Auction:
+        80 Rupee Auction:
+        Battlesquid - First Prize: Sploosh Kaboom First Prize
+        Battlesquid - Second Prize: Sploosh Kaboom Second Prize
+        Battlesquid - Under 20 Shots Prize: Sploosh Kaboom New Record
+      Color: tomato
+      Location:
+        Map: map
+        x: 525
+        y: 234
+
+Dragon Roost Island:
+  Tags: Custom Names
+  Checks:
+    Wind Shrine:
+    Chest on Top of Boulder: Boulder Chest
+    Fly Across Platforms Around Island: Long Passage
+    Rito Aerie - Baito: Baito's Mail Sorting
+    Rito Aerie - Give Hoskit 20 Golden Feathers: 20 Golden Feathers
+    Secret Cave: Mysterious Combat Cave
+  Location:
+    Map: map
+    x: 797
+    y: 226
+
+Dragon Roost Cavern:
+  Tags: Entry, Color
+  Entry: drc_true, \\[@can_access_dragon_roost_cavern\\]
+  Color: red
+  Location:
+    Map: map
+    x: 89
+    y: 1055
+
+Forest Haven:
+  Tags: None
+  Location:
+    Map: map
+    x: 820
+    y: 820
+
+Forbidden Woods:
+  Tags: Entry, Color
+  Entry: fw_true, \\[@can_access_forbidden_woods\\]
+  Color: green
+  Location:
+    Map: map
+    x: 236
+    y: 1055
+
+Greatfish Isle:
+  Tags: None
+  Location:
+    Map: map
+    x: 228
+    y: 526
+
+Tower of the Gods:
+  Tags: Entry, Color
+  Entry: totg_true, \\[@can_access_tower_of_the_gods\\]
+  Color: yellow
+  Location:
+    Map: map
+    x: 383
+    y: 1055
+
+Hyrule:
+  Tags: None
+  Location:
+    Map: map
+    x: 660
+    y: 553
+
+Forsaken Fortress:
+  Tags: Entry, Color, Multiple Locations
+  Entry: ff_true
+  Color: purple
+  Locations:
+    1:
+      Map: map
+      x: 677
+      y: 1055
+    2:
+      Map: map
+      x: 80
+      y: 80
+
+Mother and Child Isles:
+  Tags: None
+  Location:
+    Map: map
+    x: 246
+    y: 232
+
+Fire Mountain:
+  Tags: Custom Groups
+  Groups:
+    Fire Mountain:
+      Checks:
+        Cave - Chest: Cave Chest
+      Location:
+        Map: map
+        x: 782
+        y: 347
+    Fire Mountain Platform:
+      Checks:
+        Lookout Platform Chest: Free Chest
+        Lookout Platform - Destroy the Cannons: Destroy Cannons
+      Location:
+        Map: map
+        x: 813
+        y: 377
+    Fire Mountain Big Octo:
+      Checks:
+        Big Octo:
+      Location:
+        Map: map
+        x: 830
+        y: 400
+
+Ice Ring Isle:
+  Tags: None
+  Location:
+    Map: map
+    x: 630
+    y: 840
+
+Headstone Island:
+  Tags: Custom Groups
+  Groups:
+    Headstone Island:
+      Checks:
+        Top of the Island:
+      Location:
+        Map: map
+        x: 395
+        y: 975
+    Headstone Sub:
+      Checks:
+        Submarine: Bomb Hell
+      Location:
+        Map: map
+        x: 370
+        y: 945
+
+Earth Temple:
+  Tags: Color, Entry
+  Entry: et_true, \\[@can_access_earth_temple\\]
+  Color: blue
+  Location:
+    Map: map
+    x: 824
+    y: 1055
+
+Wind Temple:
+  Tags: Color, Entry
+  Entry: wt_true, \\[@can_access_wind_temple\\]
+  Color: orange
+  Location:
+    Map: map
+    x: 971
+    y: 1055
+
+Ganon's Tower:
+  Tags: Color, End Goal
+  Color: grey
+  Location:
+    Map: map
+    x: 660
+    y: 535
+
+Mailbox:
+  Tags: Custom Names, Color
+  Color: darkred
+  Checks:
+    Letter from Hoskit's Girlfriend: Birb Girlfriend
+    Letter from Baito's Mother: Baito's Mother
+    Letter from Baito: Baito (ET)
+    Letter from Komali's Father: Komali's Father
+    Letter from Orca: Orca (FW)
+    Letter from Grandma: Grandma
+    Letter from Aryll: Aryll (FF)
+    Letter from Tingle: Tingle (FF)
+    Letter Advertising Bombs in Beedle's Shop: Bomb Ad
+    Letter Advertising Rock Spire Shop Ship: Rock Spire Ad
+    Beedle's Silver Membership Reward:
+    Beedle's Gold Membership Reward:
+  Location:
+    Map: map
+    x: 530
+    y: 1055
+
+The Great Sea:
+  Tags: Custom Groups, Multiple Locations
+  Groups:
+    Beedle's Shop Ship:
+      Checks:
+        Beedle's Shop Ship - 20 Rupee Item: 20 Rupees
+      Locations:
+        1:
+          Map: map #Spectacle
+          x: 330
+          y: 223
+        2:
+          Map: map #Pawprint
+          x: 688
+          y: 226
+        3:
+          Map: map #Dragon
+          x: 780
+          y: 265
+        4:
+          Map: map #Greatfish
+          x: 195
+          y: 546
+        5:
+          Map: map #East Triangle
+          x: 830
+          y: 535
+        6:
+          Map: map #South Triangle
+          x: 528
+          y: 650
+        7:
+          Map: map #Forest
+          x: 845
+          y: 942
+        8:
+          Map: map #Outset
+          x: 215
+          y: 952
+    Salvage Corp:
+      Checks:
+        Salvage Corp Gift: Mmm hmm
+      Locations:
+        1:
+          Map: map #North Triangle
+          x: 500
+          y: 389
+        2:
+          Map: map # West Fairy
+          x: 77
+          y: 355
+        3:
+          Map: map #Horseshoe
+          x: 40
+          y: 984
+        4:
+          Map: map #Pawprint
+          x: 649
+          y: 234
+        5:
+          Map: map #East Triangle
+          x: 795
+          y: 520
+    Cyclos:
+      Checks:
+        Cyclos: Shoot Him
+      Locations:
+        1:
+          Map: map #Mother Child
+          x: 216
+          y: 254
+        2:
+          Map: map #North Triangle
+          x: 533
+          y: 393
+        3:
+          Map: map
+          x: 396
+          y: 812
+    Goron Trading:
+      Checks:
+        Goron Trading Reward: Quest Reward
+      Locations:
+        1:
+          Map: map
+          x: 228
+          y: 506
+    Withered Trees:
+      Checks:
+        Withered Trees: Water Them All
+      Locations:
+        1:
+          Map: map #Forest
+          x: 824
+          y: 801
+        2:
+          Map: map #Cliff
+          x: 935
+          y: 783
+        3:
+          Map: map #Shark
+          x: 352
+          y: 851
+        4:
+          Map: map #Greatfish
+          x: 210
+          y: 526
+        5:
+          Map: map #Needle
+          x: 106
+          y: 682
+        6:
+          Map: map #Private
+          x: 668
+          y: 698
+        7:
+          Map: map #East Fairy
+          x: 671
+          y: 408
+        8:
+          Map: map #Mother Child
+          x: 246
+          y: 214
+        9:
+          Map: map #Star
+          x: 201
+          y: 52
+    Ghost Ship:
+      Checks:
+        Ghost Ship: Chest
+      Locations:
+        1:
+          Map: map #Star
+          x: 665
+          y: 58
+        2:
+          Map: map #Diamond
+          x: 52
+          y: 795
+        3:
+          Map: map #Bomb
+          x: 812
+          y: 624
+        4:
+          Map: map #Belt
+          x: 961
+          y: 387
+        5:
+          Map: map #Five-Star
+          x: 934
+          y: 935
+        6:
+          Map: map #Greatfish
+          x: 177
+          y: 515
+        7:
+          Map: map #Spectacle
+          x: 387
+          y: 225
+
+Private Oasis:
+  Tags: Custom Groups
+  Groups:
+    Private Oasis:
+      Checks:
+        Chest at Top of Waterfall: Waterfall Chest
+        Cabana Labyrinth - Lower Floor Chest: Lower Floor Chest
+        Cabana Labyrinth - Upper Floor Chest: Upper Floor Chest
+      Location:
+        Map: map
+        x: 686
+        y: 698
+    Oasis Big Octo:
+      Checks:
+        Big Octo:
+      Location:
+        Map: map
+        x: 632
+        y: 670
+
+Spectacle Island:
+  Tags: None
+  Location:
+    Map: map
+    x: 343
+    y: 252
+
+Needle Rock Isle:
+  Tags: Custom Groups
+  Groups:
+    Needle Rock Isle:
+      Checks:
+        Chest: Fire Ring Chest
+        Cave: Light Torches
+      Location:
+        Map: map
+        x: 106
+        y: 700
+    Golden Gunboat:
+      Checks:
+        Golden Gunboat: Sunken Treasure
+      Location:
+        Map: map
+        x: 64
+        y: 669
+
+Angular Isles:
+  Tags: Custom Names
+  Checks:
+    Peak:
+    Cave: Light Puzzle
+  Location:
+    Map: map
+    x: 662
+    y: 984
+
+Boating Course:
+  Tags: Custom Groups
+  Groups:
+    Boating Course Raft:
+      Checks:
+        Raft: Free Chest
+      Location:
+        Map: Map
+        x: 812
+        y: 983
+    Boating Course:
+      Checks:
+        Cave: Three Diamond Switches
+      Location:
+        Map: map
+        x: 782
+        y: 928
+
+Stone Watcher Island:
+  Tags: Custom Groups
+  Groups:
+    Stone Watcher Island:
+      Checks:
+        Cave: Easy Combat Trial
+      Location:
+        Map: map
+        x: 335
+        y: 667
+    Stone Watcher Platform:
+      Checks:
+        Lookout Platform Chest: Free Chest
+        Lookout Platform - Destroy the Cannons: Destroy Cannons
+      Location:
+        Map: map
+        x: 392
+        y: 683
+
+Islet of Steel:
+  Tags: Custom Groups
+  Groups:
+    Islet of Steel:
+      Checks:
+        Interior:
+      Location:
+        Map: map
+        x: 250
+        y: 642
+    Islet of Steel Platform:
+      Checks:
+        Lookout Platform - Defeat the Enemies: Defeat Enemies
+      Location:
+        Map: map
+        x: 231
+        y: 699
+
+Overlook Island:
+  Tags: Custom Names
+  Checks:
+    Cave: Hard Combat Trial
+  Location:
+    Map: map
+    x: 962
+    y: 87
+
+Bird's Peak Rock:
+  Tags: Custom Names
+  Checks:
+    Cave: Birb
+  Location:
+    Map: map
+    x: 965
+    y: 681
+
+Pawprint Isle:
+  Tags: Custom Groups
+  Groups:
+    Pawprint Isle Chuchu Cave:
+      Checks:
+        Chuchu Cave - Chest: Free Chest
+        Chuchu Cave - Behind Left Boulder: Left Boulder Chest
+        Chuchu Cave - Behind Right Boulder: Right Boulder Chest
+        Chuchu Cave - Scale the Wall: Pegs Chest
+      Location:
+        Map: map
+        x: 655
+        y: 258
+    Pawprint Wizzrobe Cave:
+      Checks:
+        Wizzrobe Cave: Defeat the Enemies
+      Location:
+        Map: map
+        x: 635
+        y: 258
+    Pawprint Platform:
+      Checks:
+        Lookout Platform - Defeat the Enemies: Defeat the Enemies
+      Location:
+        Map: map
+        x: 682
+        y: 204
+
+Thorned Fairy Island:
+  Tags: Custom Groups
+  Groups:
+    Thorned Fairy Island:
+      Checks:
+        Great Fairy:
+      Location:
+        Map: map
+        x: 976
+        y: 550
+    Thorned Fairy Platforms:
+      Checks:
+        Northeastern Lookout Platform - Destroy the Cannons: Destroy Northern Cannons
+        Southwestern Lookout Platform - Defeat the Enemies: Defeat Southern Enemies
+      Location:
+        Map: map
+        x: 933
+        y: 514
+
+Eastern Fairy Island:
+  Tags: Custom Groups
+  Groups:
+    Eastern Fairy Island:
+      Checks:
+        Great Fairy:
+      Location:
+        Map: map
+        x: 689
+        y: 408
+    Eastern Fairy Platform:
+      Checks:
+        Lookout Platform - Defeat the Cannons and Enemies: Decimate Enemies and Cannons
+      Location:
+        Map: map
+        x: 616
+        y: 369
+
+Western Fairy Island:
+  Tags: Custom Groups
+  Groups:
+    Western Fairy Island:
+      Checks:
+        Great Fairy:
+      Location:
+        Map: map
+        x: 60
+        y: 379
+    Western Fairy Platform:
+      Checks:
+        Lookout Platform: Free Chest
+      Location:
+        Map: map
+        x: 87
+        y: 392
+
+Southern Fairy Island:
+  Tags: Custom Groups
+  Groups:
+    Southern Fairy Island:
+      Checks:
+        Great Fairy:
+      Location:
+        Map: map
+        x: 485
+        y: 784
+    Southern Fairy Platforms:
+      Checks:
+        Lookout Platform - Destroy the *: Destroy Both Cannon Sets
+      Location:
+        Map: map
+        x: 535
+        y: 844
+
+Northern Fairy Island:
+  Tags: Custom Groups
+  Groups:
+    Northern Fairy Island:
+      Checks:
+        Great Fairy:
+      Location:
+        Map: map
+        x: 397
+        y: 117
+    Northern Fairy Sub:
+      Checks:
+        Submarine: Swing to Chest
+      Location:
+        Map: map
+        x: 334
+        y: 76
+
+Tingle Island:
+  Tags: Custom Groups
+  Groups:
+    Tingle Big Octo:
+      Checks:
+       Big Octo:
+      Location:
+        Map: map
+        x: 368
+        y: 354
+    Tingle Island:
+      Checks:
+        Ankle - Reward for All Tingle Statues: Ankle
+      Location:
+        Map: map
+        x: 367
+        y: 412
+
+Diamond Steppe Island:
+  Tags: Custom Groups
+  Groups:
+    Diamond Steppe Big Octo:
+      Checks:
+       Big Octo:
+      Location:
+        Map: map
+        x: 110
+        y: 840
+    Diamond Steppe Island:
+      Checks:
+        Warp Maze Cave - *: Warp Pot Maze Chests
+      Location:
+        Map: map
+        x: 85
+        y: 817
+
+Bomb Island:
+  Tags: Custom Groups
+  Groups:
+    Bomb Island:
+      Checks:
+        Cave:
+      Location:
+        Map: map
+        x: 806
+        y: 680
+    Bomb Island Sub:
+      Checks:
+        Submarine: Defeat the Enemies
+      Location:
+        Map: map
+        x: 334
+        y: 76
+    Bomb Island Platform:
+      Checks:
+        Lookout Platform - Defeat the Enemies: Defeat the Enemies
+      Location:
+        Map: map
+        x: 809
+        y: 723
+
+Rock Spire Isle:
+  Tags: Custom Groups
+  Groups:
+    Rock Spire Isle:
+      Checks:
+        Cave: Keese Cave
+      Location:
+        Map: map
+        x: 210
+        y: 351
+    Beedle's Special Shop Ship:
+      Checks:
+        Beedle's Special Shop Ship - 500 Rupee Item: 500 Rupees
+        Beedle's Special Shop Ship - 950 Rupee Item: 950 Rupees
+        Beedle's Special Shop Ship - 900 Rupee Item: 900 Rupees
+      Location:
+        Map: map
+        x: 189
+        y: 349
+    Rock Spire Platforms:
+      Checks:
+        Center Lookout Platform: Free Chest
+        Eastern Lookout Platform - Destroy the Cannons: Destroy Eastern Cannons
+        Western Lookout Platform - Destroy the Cannons: Destroy Western Cannons
+      Location:
+        Map: map
+        x: 231
+        y: 393
+    Rock Spire Gunboat:
+      Checks:
+        Southeast Gunboat: Sunken Treasure
+      Location:
+        Map: map
+        x: 212
+        y: 405
+
+Shark Island:
+  Tags: Custom Names
+  Checks:
+    Cave: Enemy Hell
+  Location:
+    Map: map
+    x: 370
+    y: 851
+
+Cliff Plateau Isles:
+  Tags: Custom Groups
+  Groups:
+    Cliff Plateau Isles:
+      Checks:
+        Cave: Vines Chest
+        Highest Isle: Highest Chest
+      Location:
+        Map: map
+        x: 917
+        y: 783
+    Cliff Plateau Platform:
+      Checks:
+        Lookout Platform: Free Chest
+      Location:
+        Map: map
+        x: 982
+        y: 840
+
+Crescent Moon Island:
+  Tags: Custom Groups
+  Groups:
+    Crescent Moon Island:
+      Checks:
+        Chest: Free Chest
+      Location:
+        Map: map
+        x: 655
+        y: 80
+    Crescent Moon Sub:
+      Checks:
+        Submarine: Annoying Chest
+      Location:
+        Map: map
+        x: 645
+        y: 40
+
+Horseshoe Island:
+  Tags: Custom Groups
+  Groups:
+    Horshoe Island:
+      Checks:
+        Play Golf:
+        Cave: Mothula Cave
+      Location:
+        Map: map
+        x: 50
+        y: 963
+    Horseshoe Platforms:
+      Checks:
+        Northwestern Lookout Platform: Northern Free Chest
+        Southeastern Lookout Platform: Southern Free Chest
+      Location:
+        Map: map
+        x: 92
+        y: 991
+
+Flight Control Platform:
+  Tags: Custom Groups
+  Groups:
+    Bird-Man Contest:
+      Checks:
+        Bird-Man Contest - First Prize: Prize
+      Location:
+        Map: map
+        x: 958
+        y: 231
+    Flight Control Sub:
+      Checks:
+        Submarine: Defeat the Wizzrobes
+      Location:
+        Map: map
+        x: 989
+        y: 269
+
+Star Island:
+  Tags: Custom Groups
+  Groups:
+    Star Island:
+      Checks:
+        Cave: Defeat the Enemies
+      Location:
+        Map: map
+        x: 219
+        y: 52
+    Star Platform:
+      Checks:
+        Lookout Platform: Free Chest
+      Location:
+        Map: map
+        x: 211
+        y: 101
+
+Star Belt Archipelago:
+  Tags: Custom Groups
+  Groups:
+    Star Belt Platform:
+      Checks:
+        Lookout Platform: Free Chest
+      Location:
+        Map: map
+        x: 992
+        y: 371
+
+Five-Star Isles:
+  Tags: Custom Groups
+  Groups:
+    Five-Star Platform:
+      Checks:
+        Lookout Platform - Destroy the Cannons: Destroy the Cannons
+      Location:
+        Map: map
+        x: 943
+        y: 975
+    Five-Star  Rafts:
+      Checks:
+        Submarine: Defeat the Bokoblins
+        Raft:
+      Location:
+        Map: map
+        x: 990
+        y: 1003
+
+Seven-Star Isles:
+  Tags: Custom Groups
+  Groups:
+    Seven-Star Platforms:
+      Checks:
+        Center Lookout Platform: Kill the Central Wizzrobe
+        Northern Lookout Platform: Kill the Northern Wizzrobe
+        Southern Lookout Platform: Kill the remaining Wizzrobes
+      Location:
+        Map: map
+        x: 883
+        y: 110
+    Seven-Star Big Octo:
+      Checks:
+        Big Octo:
+      Location:
+        Map: map
+        x: 771
+        y: 111
+
+Cyclops Reef:
+  Tags: Custom Groups
+  Groups:
+    Cyclops Reef:
+      Checks:
+        Destroy the Cannons and Gunboats: Clear the Reef
+      Location:
+        Map: map
+        x: 385
+        y: 548
+    Cyclops Platform:
+      Checks:
+        Lookout Platform - Defeat the Enemies: Defeat the Enemies
+      Location:
+        Map: map
+        x: 338
+        y: 512
+
+Two-Eye Reef:
+  Tags: Custom Groups
+  Groups:
+    Two-Eye Reef:
+      Checks:
+        Destroy the Cannons and Gunboats: Clear the Reef
+      Location:
+        Map: map
+        x: 519
+        y: 944
+    Two-Eye Platform:
+      Checks:
+        Lookout Platform: Free Chest
+      Location:
+        Map: map
+        x: 526
+        y: 1011
+    Two-Eye Big Octo:
+      Checks:
+        Big Octo Great Fairy: Great Fairy
+      Location:
+        Map: map
+        x: 477
+        y: 955
+
+Three-Eye Reef:
+  Tags: Custom Names
+  Checks:
+    Destroy the Cannons and Gunboats: Clear the Reef
+  Location:
+    Map: map
+    x: 47
+    y: 557
+
+Four-Eye Reef:
+  Tags: Custom Names
+  Checks:
+    Destroy the Cannons and Gunboats: Clear the Reef
+  Location:
+    Map: map
+    x: 101
+    y: 207
+
+Five-Eye Reef:
+  Tags: Custom Groups
+  Groups:
+    Five-Eye Reef:
+      Checks:
+        Destroy the Cannons: Clear the Reef
+      Location:
+        Map: map
+        x: 201
+        y: 798
+    Five-Eye Platform:
+      Checks:
+        Lookout Platform: Free Chest
+      Location:
+        Map: map
+        x: 269
+        y: 835
+
+Six-Eye Reef:
+  Tags: Custom Groups
+  Groups:
+    Six-Eye Reef:
+      Checks:
+        Destroy the Cannons and Gunboats: Clear the Reef
+      Location:
+        Map: map
+        x: 528
+        y: 508
+    Six-Eye Platform:
+      Checks:
+        Lookout Platform - Destroy the Cannons: Destroy the Cannons
+      Location:
+        Map: map
+        x: 553
+        y: 560
+    Six-Eye Sub:
+      Checks:
+        Submarine: Defeat the Moblins
+      Location:
+        Map: map
+        x: 479
+        y: 561

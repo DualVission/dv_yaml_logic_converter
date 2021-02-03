@@ -1,0 +1,1493 @@
+Can Play Wind's Requiem:
+  Wind Waker & Wind's Requiem
+Can Change Wind Direction:
+  Can Play Wind's Requiem
+  | (Option "swift_sail" Enabled & Tricked Logic)
+Can Play Ballad of Gales:
+  Wind Waker & Ballad of Gales
+Can Play Command Melody:
+  Wind Waker & Command Melody
+Can Play Earth God's Lyric:
+  Wind Waker & Earth God's Lyric
+Can Play Wind God's Aria:
+  Wind Waker & Wind God's Aria
+Can Play Song of Passing:
+  Wind Waker & Song of Passing
+Can Fly With Deku Leaf Outdoors:
+  Deku Leaf & Can Change Wind Direction
+Can Aim Mirror Shield:
+  Mirror Shield
+  & (
+    Progressive Sword x1
+    | Wind Waker
+    | Grappling Hook
+    | Boomerang
+    | Deku Leaf
+    | Progressive Bow x1
+    | Hookshot
+  )
+Can Cut or Slash:
+  Progressive Sword x1
+  | Skull Hammer
+Can Jumpslash:
+  Can Cut or Slash
+  # You need to be holding an item in your hand in order to aim your shield around. Otherwise you can only aim it behind you at an angle or straight in front of you.
+  # (Empty Bottle also works, but you would need to use the contents first so not in the logic.)
+  # (Picto Box also works, but is not included as it would be a weirder and less intuitive thing to have to use to aim the shield as you normally wouldn't need to use picto box to solve dungeon puzzles.)
+Can Move Boulders:
+  Bombs | Power Bracelets
+Can Defeat Door Flowers:
+  Boomerang | Progressive Bow x1 | Bombs | Hookshot
+Can Hit Diamond Switches at Range:
+  Boomerang | Progressive Bow x1 | Hookshot
+Can Destroy Seeds Hanging by Vines:
+  Boomerang | Progressive Bow x1 | Bombs | Hookshot
+Can Refill Magic:
+  Can Cut Grass | Magic Meter Upgrade | (Empty Bottle & Tricked Logic)
+
+Hero's Sword:
+  Progressive Sword x1
+Any Master Sword:
+  Progressive Sword x2
+Full Power Master Sword:
+  Progressive Sword x4
+Hero's Bow:
+  Progressive Bow x1
+Fire Arrows:
+  Progressive Bow x2
+Ice Arrows:
+  Progressive Bow x2
+Light Arrows:
+  Progressive Bow x3
+Any Wallet Upgrade:
+  Progressive Wallet x1
+Picto Box:
+  Progressive Picto Box x1
+Deluxe Picto Box:
+  Progressive Picto Box x2
+All 8 Triforce Shards:
+  Triforce Shard 1
+  & Triforce Shard 2
+  & Triforce Shard 3
+  & Triforce Shard 4
+  & Triforce Shard 5
+  & Triforce Shard 6
+  & Triforce Shard 7
+  & Triforce Shard 8
+
+Tingle Tuner Bombs:
+  Bombs
+  # Note: If an option to require Tingle Tuner is added, this macro should have Bombs replaced with Tingle Tuner when that option is on.
+
+Can Access Dungeon Entrance On Dragon Roost Island:
+  Can Travel to Dragon Roost Island
+Can Access Forest Haven:
+  (
+    Grappling Hook
+    | Can Fly With Deku Leaf Outdoors
+    | (Complex Logic & Wind Waker)
+  )
+  & Can Travel to Forest Haven
+  # Grappling over the waterfall is very difficult without killing the Boko Baba there - but only if you start grappling from the top. You can grapple from the bottom up to avoid that Boko Baba entirely, so there's no extra requirement here for swordless.
+Can Access Dungeon Entrance In Forest Haven Sector:
+  (
+    Can Access Forest Haven
+    & (Grappling Hook | (Tricked Logic & Wind Waker))
+    & Can Fly With Deku Leaf Outdoors
+    & Can Refill Magic
+  )
+  | (Complex Logic & Wind Waker)
+  # You either need double magic or the ability to refill your magic by cutting grass to make it all the way across.
+  # Note: You don't need Grappling Hook because you can take the lower platform exit out of Forest Haven (Noob Skip), but this is not currently in the logic.
+Can Access Dungeon Entrance In Tower of the Gods Sector:
+  Din's Pearl
+  & Farore's Pearl
+  & Nayru's Pearl
+  & Can Travel to Tower of the Gods
+Can Access Dungeon Entrance On Headstone Island:
+  (
+    Power Bracelets
+    | (Complex Logic & Wind Waker)
+  ) & Can Travel to Headstone Island
+Can Access Dungeon Entrance On Gale Isle:
+  (Skull Hammer | (Complex Logic & Wind Waker))
+  & (Iron Boots | (Glitched Logic & Wind Waker))
+  & Can Travel to Gale Isle
+
+# The below macros are used when dungeon entrances are not randomized.
+# When dungeon entrances are randomized, these macros are shuffled around by the randomizer logic.
+Can Access Dragon Roost Cavern:
+  Can Access Dungeon Entrance On Dragon Roost Island
+Can Access Forbidden Woods:
+  Can Access Dungeon Entrance In Forest Haven Sector
+Can Access Forbidden Woods Basement:
+  Can Access Forbidden Woods
+  & Deku Leaf
+  & (
+    (Wind Waker & Glitched Logic & Can Defeat Boko Babas)
+    | (Wind Waker & Complex Logic)
+    | (Bombs & Glitched Logic)
+    | Boomerang
+  )
+Can Access Tower of the Gods:
+  Can Access Dungeon Entrance In Tower of the Gods Sector
+Can Access Earth Temple:
+  Can Access Dungeon Entrance On Headstone Island
+Can Get into Earth Temple:
+  Can Access Earth Temple
+  & (
+    Can Play Command Melody
+    | (
+      Glitched Logic
+      & Deku Leaf
+    )
+  )
+Can Access Earth Temple Basement:
+  Can Get into Earth Temple
+  & (
+      (Can Play Command Melody & ET Small Key x3)
+      | (ET Small Key x2 & Can Aim Mirror Shield & Complex Logic)
+   )
+Can Access Wind Temple:
+  Can Access Dungeon Entrance On Gale Isle
+Can Access Wind Temple Basement:
+ Can Access Wind Temple
+ & Can Play Command Melody
+ & (
+   (Deku Leaf & Glitched Logic & (Magic Meter Upgrade | Empty Bottle | Iron Boots))
+   | (Deku Leaf & Iron Boots)
+   | (Can Spring Storage & (Fire Arrows | Bombs | Can Jumpslash))
+ )
+
+Can Get into Secret Cave Entrance on Outset Island:
+  ((Can Cut Down Outset Trees | Tricked Logic) & Can Fly With Deku Leaf Outdoors & Power Bracelets)
+  | (Hookshot & Power Bracelets)
+  | (Complex Logic & Wind Waker)
+Can Access Secret Cave Entrance on Outset Island:
+  Can Get into Secret Cave Entrance on Outset Island
+  & Can Travel to Outset Island
+Can Access Secret Cave Entrance on Dragon Roost Island:
+  (
+    Bombs
+    | Power Bracelets
+    | Glitched Logic
+  ) & Can Travel to Dragon Roost Island
+Can Access Secret Cave Entrance on Fire Mountain:
+  Progressive Bow x2
+  & Can Travel to Fire Mountain
+  & Can Sail
+Can Access Secret Cave Entrance on Ice Ring Isle:
+  Progressive Bow x2
+  & Can Travel to Ice Ring Isle
+  & Can Sail
+Can Get into Secret Cave Entrance on Private Oasis:
+  (Cabana Deed & Delivery Bag & Grappling Hook)
+  | (Glitched Logic & Wind Waker & Grappling Hook & (Can Fly With Deku Leaf Outdoors | Hookshot))
+  | (Complex Logic & Wind Waker & Grappling Hook)
+Can Access Secret Cave Entrance on Private Oasis:
+  Can Get into Secret Cave Entrance on Private Oasis
+  & Can Travel to Private Oasis
+Can Access Secret Cave Entrance on Needle Rock Isle:
+  (
+  Progressive Bow x2
+  | (Wind Waker & Glitched Logic)
+  ) & Can Travel to Needle Rock Isle
+Can Access Secret Cave Entrance on Angular Isles:
+  # Either Deku Leaf or Hookshot are needed to get into the cave.
+  (
+    Can Fly With Deku Leaf Outdoors
+    | Hookshot
+    | (Complex Logic & Wind Waker)
+  ) & Can Travel to Angular Isles
+Can Get into Secret Cave Entrance on Boating Course:
+  # Getting inside the cave requires flying with Deku Leaf or Hookshotting the pole.
+  Can Fly With Deku Leaf Outdoors
+  | Hookshot
+  | (Complex Logic & Wind Waker & Can Cut or Slash)
+Can Access Secret Cave Entrance on Boating Course:
+  Can Get into Secret Cave Entrance on Boating Course
+  & Can Travel to Boating Course
+Can Get into Secret Cave Entrance on Stone Watcher Island:
+  Power Bracelets | (Complex Logic & Wind Waker & Can Cut or Slash)
+Can Access Secret Cave Entrance on Stone Watcher Island:
+  Can Get into Secret Cave Entrance on Stone Watcher Island
+  & Can Travel to Stone Watcher Island
+Can Access Secret Cave Entrance on Overlook Island:
+  (
+    Hookshot
+    | (Complex Logic & Wind Waker)
+  ) & Can Travel to Overlook Island
+Can Access Secret Cave Entrance on Bird's Peak Rock:
+  # Need to hit the switches with a seagull.
+  (
+    Bait Bag
+    | (Tricked Logic & Grappling Hook)
+    | (Complex Logic & Wind Waker)
+  ) & Can Travel to Bird's Peak Rock
+Can Access Secret Cave Entrance on Pawprint Isle:
+  Can Travel to Pawprint Isle
+Can Access Secret Cave Entrance on Pawprint Isle Side Isle:
+  (
+    Hookshot
+    | (Glitched Logic & Deku Leaf & Bombs)
+  ) & Can Travel to Pawprint Isle
+Can Access Secret Cave Entrance on Diamond Steppe Island:
+  (
+    Hookshot
+    | (
+      Glitched Logic
+      & Wind Waker
+      & Can Sail
+      & Option "swift_sail" Enabled
+    )
+  ) & Can Travel to Diamond Steppe Island
+Can Access Secret Cave Entrance on Bomb Island:
+  (
+    Bombs
+    | Power Bracelets
+    | (Complex Logic & Wind Waker)
+  ) & Can Travel to Bomb Island
+Can Access Secret Cave Entrance on Rock Spire Isle:
+  (
+    Bombs
+    | (Glitched Logic & Can Fly With Deku Leaf Outdoors)
+    | (Complex Logic & Wind Waker & Can Cut or Slash)
+  ) & Can Travel to Rock Spire Isle
+Can Access Secret Cave Entrance on Shark Island:
+  # Iron Boots and Skull Hammer are necessary to hit the two big buttons.
+  # The diamond switch does not require Boomerang or any ranged weapon - you can just hit it with your sword or hammer.
+  Iron Boots
+  & Skull Hammer
+  & Can Travel to Shark Island
+Can Access Secret Cave Entrance on Cliff Plateau Isles:
+  Can Travel to Cliff Plateau Isles
+Can Access Secret Cave Entrance on Horseshoe Island:
+  # Need Deku Leaf to play golf.
+  (
+    Deku Leaf
+    | Complex Logic
+  ) & Can Travel to Horseshoe Island
+Can Access Secret Cave Entrance on Star Island:
+  #Note, the loading zone doesn't seem to trigger unless the rock breaks. As such DO NOT CHANGE THIS MACRO CRAIN
+  (
+    Bombs
+    | Power Bracelets
+  ) & Can Travel to Star Island
+
+# The below macros are used when secret cave entrances are not randomized.
+# When secret cave entrances are randomized, these macros are shuffled around by the randomizer logic.
+Can Access Savage Labyrinth:
+  Can Access Secret Cave Entrance on Outset Island
+Can Access Dragon Roost Island Secret Cave:
+  Can Access Secret Cave Entrance on Dragon Roost Island
+Can Access Fire Mountain Secret Cave:
+  Can Access Secret Cave Entrance on Fire Mountain
+Can Access Ice Ring Isle Secret Cave:
+  Can Access Secret Cave Entrance on Ice Ring Isle
+Can Access Cabana Labyrinth:
+  Can Access Secret Cave Entrance on Private Oasis
+Can Access Needle Rock Isle Secret Cave:
+  Can Access Secret Cave Entrance on Needle Rock Isle
+Can Access Angular Isles Secret Cave:
+  Can Access Secret Cave Entrance on Angular Isles
+Can Access Boating Course Secret Cave:
+  Can Access Secret Cave Entrance on Boating Course
+Can Access Stone Watcher Island Secret Cave:
+  Can Access Secret Cave Entrance on Stone Watcher Island
+Can Access Overlook Island Secret Cave:
+  Can Access Secret Cave Entrance on Overlook Island
+Can Access Bird's Peak Rock Secret Cave:
+  Can Access Secret Cave Entrance on Bird's Peak Rock
+Can Access Pawprint Isle Chuchu Cave:
+  Can Access Secret Cave Entrance on Pawprint Isle
+Can Access Pawprint Isle Wizzrobe Cave:
+  Can Access Secret Cave Entrance on Pawprint Isle Side Isle
+Can Access Diamond Steppe Island Warp Maze Cave:
+  Can Access Secret Cave Entrance on Diamond Steppe Island
+Can Access Bomb Island Secret Cave:
+  Can Access Secret Cave Entrance on Bomb Island
+Can Access Rock Spire Isle Secret Cave:
+  Can Access Secret Cave Entrance on Rock Spire Isle
+Can Access Shark Island Secret Cave:
+  Can Access Secret Cave Entrance on Shark Island
+Can Access Cliff Plateau Isles Secret Cave:
+  Can Access Secret Cave Entrance on Cliff Plateau Isles
+Can Access Horseshoe Island Secret Cave:
+  Can Access Secret Cave Entrance on Horseshoe Island
+Can Access Star Island Secret Cave:
+  Can Access Secret Cave Entrance on Star Island
+
+Can Get Past Forsaken Fortress Gate:
+  (
+  Bombs
+  | Tricked Logic
+  )
+  & Can Travel to Forsaken Fortress
+  # Note: It's also possible to blow up the door without bombs by using the mounted cannons, but this is not required by the logic.
+  # Note: It's also possible to get past the gate by going all the way down to Ganon's Tower, and then activating the warp up to Forsaken Fortress. But this is not currently required by the logic.
+Can Get Inside Forsaken Fortress:
+  Can Get Past Forsaken Fortress Gate
+  & (
+    Skull Hammer
+    | (
+      Tricked Logic
+      & Wind Waker
+    ) | Complex Logic
+  )
+  # Even though you can kill Phantom Ganon without the Skull Hammer, that only lets you access the one chest he spawns.
+  # You can't access the other chests/boss without Skull Hammer.
+Can Reach and Defeat Phantom Ganon:
+  Can Get Past Forsaken Fortress Gate
+  & Can Defeat Phantom Ganon
+Can Defeat Phantom Ganon:
+  # You need any form of the Master Sword to damage Phantom Ganon.
+  # Note that his energy balls can be reflected with either the Master Sword or an empty bottle, but you still need the Master Sword to deal damage.
+  (Outside Swordless Mode & Progressive Sword x2)
+  | (In Swordless Mode & Skull Hammer)
+  # Swordless switches Phantom Ganon's damage vulnerability to be for Skull Hammer instead of the Master Sword.
+
+Can Access Hyrule:
+  Triforce Shard 1
+  & Triforce Shard 2
+  & Triforce Shard 3
+  & Triforce Shard 4
+  & Triforce Shard 5
+  & Triforce Shard 6
+  & Triforce Shard 7
+  & Triforce Shard 8
+Can Get Past Hyrule Barrier:
+  Can Access Hyrule
+  & (
+    Progressive Sword x4
+    | In Swordless Mode
+    | (
+      Complex Logic
+      & Progressive Sword x1
+      & Wind Waker
+      & Bombs
+    )
+  )
+Can Access Ganon's Tower:
+  Can Get Past Hyrule Barrier
+  & (Hookshot | Deku Leaf)
+
+Can Complete Memory Dragon Roost Cavern and Gohma:
+  Grappling Hook
+  & Deku Leaf
+  & Can Defeat Gohma
+Can Complete Memory Forbidden Woods and Kalle Demos:
+  Deku Leaf
+  & Can Defeat Kalle Demos
+Can Complete Memory Earth Temple and Jalhalla:
+  Can Defeat Jalhalla
+  # Mirror Shield is not needed in the hallway leading up to Jalhalla because you can lure the Purple Chuchus into the light.
+  # It's not needed for Jalhalla because Light Arrows work in their place.
+Can Complete Memory Wind Temple and Molgera:
+  Deku Leaf
+  & Can Defeat Molgera
+  # You're intended to use iron boots here, but you can simply fly across the gap with deku leaf instead. No damage boosting off spikes or leaf pumping required.
+Can Complete All Memory Dungeons and Bosses:
+  Can Complete Memory Dragon Roost Cavern and Gohma
+  & Can Complete Memory Forbidden Woods and Kalle Demos
+  & Can Complete Memory Earth Temple and Jalhalla
+  & Can Complete Memory Wind Temple and Molgera
+
+
+Can Unlock Ganon's Tower Four Boss Door:
+  Can Complete All Memory Dungeons and Bosses
+  | Rematch Bosses Skipped
+  | (Complex Logic & Bombs & Deku Leaf)
+Can Reach Ganon's Tower Phantom Ganon Room:
+  Can Access Ganon's Tower
+  & Can Unlock Ganon's Tower Four Boss Door
+Can Reach and Defeat Puppet Ganon:
+  Can Reach Ganon's Tower Phantom Ganon Room
+  & Progressive Bow x3
+  & Can Defeat Moblins
+  & Can Defeat Darknuts
+  & Can Defeat Mighty Darknuts
+  & Can Defeat Puppet Ganon
+Can Defeat Puppet Ganon:
+  (Boomerang | Glitched Logic)
+  # Boomerang isn't strictly necessary to defeat Puppet Ganon but makes things significantly easier, both to cut down Puppet Ganon's strings and to defeat the keese who drop refills.
+Can Reach and Defeat Ganondorf:
+  Can Reach and Defeat Puppet Ganon
+  & (Grappling Hook | Glitched Logic)
+  & (Hookshot | Complex Logic)
+  & Can Defeat Ganondorf
+Can Defeat Ganondorf:
+  # You need a sword to kill Ganondorf, but it doesn't need to be the Master Sword.
+  # You need a shield to reflect Zelda's light arrows, but it doesn't need to be Mirror Shield.
+  # It doesn't matter if you have the bow or not, Zelda will still get it.
+  (Progressive Sword x1 | In Swordless Mode)
+  & Hero's Shield
+  & Convenient
+  # Swordless gives you a sword temporarily during the Ganondorf fight, so you don't need to have found a sword item.
+
+Rescued Aryll:
+  Nothing # We set the event bit for having rescued Aryll by default.
+Rescued Tingle:
+  Nothing
+
+Can Salvage Treasure:
+  Grappling Hook
+  & Can Sail
+
+Can Get Fairies:
+  Can Travel to Northern Fairy Island | Can Travel to any Island # Northern Fairy Island can be entered without any items.
+Can Farm Knight's Crests:
+  Grappling Hook & Spoils Bag
+  & (
+    (Can Access Other Location "Ice Ring Isle - Inner Cave - Chest")
+    | (Can Access Other Location "Outset Island - Savage Labyrinth - Floor 30")
+    | (Can Access Other Location "Earth Temple - Big Key Chest" & Can Defeat Darknuts Easily)
+    | (Can Access Other Location "Wind Temple - Big Key Chest" & Can Defeat Darknuts Easily)
+    | (Can Access Other Location "Shark Island - Cave")
+    | (Can Access Other Location "Stone Watcher Island - Cave" & Can Defeat Darknuts Easily)
+    | (Can Access Other Location "Overlook Island - Cave" & Can Defeat Darknuts Easily)
+    | (Can Access Hyrule)
+  )
+  # There are respawning Darknuts in:
+  # * The inner cave of Ice Ring Isle.
+  # * Floor 27 (and below) of Savage Labyrinth. (We use the Floor 30 requirements here instead of Floor 27 because there's only 1 Darknut on Floor 27, and having to do 27 floors to get 1 Knight's Crest would be way more tedious than doing 30 floors to get 3 Knight's Crests and a chest item.)
+  # * The big key room of Earth Temple.
+  # * The big key room of Wind Temple.
+  # * Shark Island's cave.
+  # * Stone Watcher Island's cave. (After defeating them once, the cave stays 'completed' in that the door stays unlocked and the fires remain lit, but you can refight the Darknuts by defeating the 4 surrounding rooms again.) (The logic for this location includes "Can Play Wind's Requiem" which is necessary for getting the chest but not killing the Darknuts, but since Wind Waker and Wind's Requiem are not currently randomized it makes no difference to the logic.)
+  # * Overlook Island's cave. (Same notes as Stone Watcher above.)
+  # * Inside Hyrule Castle.
+  # Note: The Ice Ring, Savage, Shark Island, and Hyrule Castle ones have enemies with droppable weapons in the same room as the Darknut, so in swordless you can trick the Darknut into attacking the other enemies, steal their weapon, and use it to kill the Darknut.
+Can Farm Joy Pendants:
+  Grappling Hook & Spoils Bag
+  # Dropped by Bokoblins, which are everywhere.
+Can Farm Skull Necklaces:
+  Grappling Hook & Spoils Bag
+  # Dropped by Moblins. The Moblins in submarines don't require any items to access.
+Can Farm Golden Feathers:
+  Grappling Hook & Spoils Bag
+  # Dropped by Kargarocs and Peahats. Kargarocs are on platforms so you don't need anything to reach them.
+Can Farm Green Chu Jelly:
+  Grappling Hook & Spoils Bag
+  # Green ChuChus are accessible without any items on Outset at night.
+Can Obtain 15 Blue Chu Jelly:
+  # There are 23 Blue ChuChus in the game, which each drop their jelly only once.
+  # 14/23 need no items to reach (not counting the items needed to defeat/steal from them).
+  # The remaining 9/23 do need items to reach.
+  # So all you need to get 15 is any 1 out of the 9 requirements.
+  Can Get Blue Chu Jelly from Blue ChuChus
+  & (
+    Bombs
+    | Power Bracelets
+    | Hookshot
+    | Bombs
+    | Grappling Hook
+    | Hookshot
+    | (Can Access Secret Cave Entrance on Shark Island & Can Fly With Deku Leaf Outdoors)
+    | Can Access Other Location "Cliff Plateau Isles - Highest Isle"
+    | Deku Leaf
+    | Can Access Secret Cave Entrance on Boating Course
+  )
+  & Spoils Bag
+  # Full list of Blue ChuChus:
+  # * Star Island, under a boulder
+  # * Northern Fairy Island (no requirements)
+  # * Crescent Moon Island (no requirements)
+  # * Crescent Moon Island, second one (no requirements)
+  # * Overlook Island, requires Hookshot
+  # * Mother and Child Isles (no requirements)
+  # * Spectacle Island (no requirements)
+  # * Pawprint Isle, on top of the larger of two stone ChuChu statues. Getting on top of it is easiest with a sword by jump attacking, but can also be done with a back hop even if you don't have a sword (no requirements)
+  # * Western Fairy Island (no requirements)
+  # * Rock Spire Isle, requires Bombs
+  # * Tingle Island (no requirements)
+  # * Eastern Fairy Island (no requirements)
+  # * Thorned Fairy Island (no requirements)
+  # * Needle Rock Isle (no requirements)
+  # * Stone Watcher Island (no requirements)
+  # * Bird's Peak Rock, up on top of the cave entrance, need Grappling Hook to get up there
+  # * Diamond Steppe Island, requires Hookshot
+  # * Shark Island, must hit the four switches, then glide into the updraft that appears with the Deku Leaf, then back to the highest part of Shark Island.
+  # * Southern Fairy Island (no requirements)
+  # * Cliff Plateau Isles, on the highest isle
+  # * Horseshoe Island, next to the second golf hole, requires Deku Leaf
+  # * Angular Isles (no requirements)
+  # * Boating Course, on the rock next to the entrance to the secret cave
+Can Farm Lots of Rupees:
+  Nothing
+  # TODO: We might want to add some restrictions here until the player can access efficient farming spots?
+
+Can Defeat Bokoblins:
+  Progressive Sword x1
+  | Progressive Bow x1
+  | Bombs
+  | Skull Hammer
+Can Defeat Green Bokoblins:
+  Can Defeat Bokoblins
+Can Defeat Blue Bokoblins:
+  Can Defeat Bokoblins
+Can Defeat Pink Bokoblins:
+  Can Defeat Bokoblins
+Can Defeat Moblins:
+  Progressive Sword x1
+  | Progressive Bow x1
+  | Bombs
+  | Skull Hammer
+  # Moblins are tricky to kill with just Bombs because they run away from them when they reach low health. Easiest way is to use one bomb to knock the spear out of its hands, then use the spear to kill it.
+Can Defeat Darknuts:
+  Progressive Sword x1
+  | Progressive Bow x3
+  | Skull Hammer
+  # Removing their armor with Skull Hammer is tricky.
+  # The most consistent way with Skull Hammer is to run up to a Darknut, do a spin attack to hit its armor, roll away to dodge its attack, roll back in and do another spin attack, and repeat until the armor has been broken.
+  # Another way is to circle around the Darknut counterclockwise without locking onto it and wait for it to attack. As soon as it attacks, use the hammer to attack its back and its armor will fall off in one hit.
+Can Defeat Darknuts Easily:
+  Progressive Sword x1
+  | Progressive Bow x3
+Can Defeat Mighty Darknuts:
+  Can Defeat Darknuts Easily
+  | (Can Defeat Darknuts & Complex Logic)
+  # The capes Mighty Darknuts have mean the one hit armor removal with the hammer doesn't work.
+  # Destroying the armor the slow way by hitting it repeatedly with spinning hammer attacks is far too hard against Mighty Darknuts, so that's not in logic.
+Can Defeat Miniblins:
+  Progressive Sword x1
+  | Grappling Hook
+  | Boomerang
+  | Progressive Bow x1
+  | Bombs
+  | Skull Hammer
+  # Grappling Hook does no damage for the first few hits on each Miniblin. But once the Miniblin runs out of hearts and rupees to give you, the Grappling Hook starts doing damage and can kill it.
+Can Defeat Miniblins Easily:
+  Progressive Sword x1
+  | Boomerang
+  | Progressive Bow x1
+  | Bombs
+  | Skull Hammer
+Can Defeat Red ChuChus:
+  Progressive Sword x1
+  | Skull Hammer
+  | Bombs
+  | Progressive Bow x1
+Can Defeat Green ChuChus:
+  Can Defeat Red ChuChus
+Can Defeat Yellow ChuChus:
+  (Boomerang & Progressive Sword x1)
+  | Progressive Bow x1
+  | Bombs
+  | (Deku Leaf & Progressive Sword x1)
+  | Skull Hammer
+  # Note: Skull Hammer can stun them without taking damage if you hit the ground near them instead of hitting them directly.
+  # Note: Grappling Hook does stun it just barely long enough for you to kill it with your sword.
+  # But this is not immediately obvious and somewhat tricky to time, so maybe reserve that for a higher difficulty level.
+Can Defeat Blue ChuChus:
+  Can Defeat Yellow ChuChus
+Can Get Blue Chu Jelly from Blue ChuChus:
+  Can Defeat Blue ChuChus
+  | Grappling Hook
+Can Defeat Dark ChuChus:
+  Nothing
+  # Simply lure them into the light rays and then pick them up and throw them. Neither Mirror Shield nor a weapon are necessary.
+Can Defeat Keese:
+  Progressive Sword x1
+  | Hookshot
+  | Grappling Hook
+  | Boomerang
+  | Progressive Bow x1
+  | Bombs
+  | Skull Hammer
+Can Defeat Fire Keese:
+  Can Defeat Keese
+Can Defeat Magtails:
+  Progressive Sword x1
+  | Skull Hammer
+  | Boomerang
+  | Hookshot
+  | Bombs
+  | Grappling Hook
+  | Progressive Bow x1
+Can Stun Magtails:
+  Progressive Sword x1
+  | Skull Hammer
+  | Boomerang
+  | Hookshot
+  | Bombs
+  | Grappling Hook
+  | Progressive Bow x1
+Can Defeat Kargarocs:
+  Progressive Sword x1
+  | Boomerang
+  | Progressive Bow x1
+  | Skull Hammer
+  | Bombs
+Can Defeat Peahats:
+  Boomerang
+  | (Hookshot & Progressive Sword x1)
+  | (Deku Leaf & Progressive Sword x1)
+  | Skull Hammer
+  | Progressive Bow x1
+  | Bombs
+Can Remove Peahat Armor:
+  Boomerang
+  | Hookshot
+  | Deku Leaf
+  | Skull Hammer
+  | Progressive Bow x1
+  | Bombs
+Can Defeat Seahats:
+  Boomerang
+  | Progressive Bow x1
+  | Hookshot
+  | Bombs
+Can Defeat Boko Babas:
+  Progressive Sword x1
+  | Boomerang
+  | Skull Hammer
+  | Progressive Bow x1
+  | Hookshot
+  | Bombs
+  | (Deku Leaf & Grappling Hook)
+  # Note: Killing Boko Babas with the Skull Hammer does not yield a stick if you squish them, but if you stun it first then kill it while it's stunned, it will yield a stick as normal.
+Can Defeat Mothulas:
+  Progressive Sword x1
+  | Progressive Bow x1
+  | Bombs
+  | Skull Hammer
+Can Defeat Winged Mothulas:
+  Progressive Sword x1
+  | Progressive Bow x1
+  | Bombs
+  | Skull Hammer
+Can Defeat Wizzrobes:
+  Progressive Sword x1
+  | Progressive Bow x1
+  | Hookshot
+  | Bombs
+  | Skull Hammer
+Can Defeat Wizzrobes at Range:
+  Progressive Bow x1
+  | Hookshot
+Can Defeat Armos:
+  Progressive Sword x1
+  | Progressive Bow x1
+  | Bombs
+  | Skull Hammer
+  | Hookshot
+  # Progressive Bow x1 makes killing these more convenient compared to just with sword/hammer.
+Can Defeat Armos Knights:
+  Bombs
+  | Progressive Bow x3
+Can Defeat Big Octos:
+  Progressive Bow x1
+  | Bombs
+  | Boomerang
+  # Hookshot can technically damage Big Octos, but it only reaches at the end when your time limit is almost up.
+Can Defeat Twelve-Eye Octos:
+  Progressive Bow x3
+  | Bombs
+  | Boomerang
+  | (Progressive Bow x1 & Complex Logic)
+  # Hookshot can technically damage Big Octos, but it only reaches at the end when your time limit is almost up.
+Can Defeat Red Bubbles:
+  Progressive Sword x1
+  | Skull Hammer
+  | Progressive Bow x1
+  | Bombs
+  | (
+    (Deku Leaf | Hookshot)
+    & Grappling Hook
+  )
+Can Defeat Blue Bubbles:
+  Progressive Bow x2
+  | Bombs
+  | (
+    (Deku Leaf | Hookshot)
+    & (Progressive Sword x1 | Progressive Bow x1 | Grappling Hook | Skull Hammer)
+  )
+Can Defeat ReDeads:
+  Progressive Sword x1
+  | Progressive Bow x3
+  | Skull Hammer
+  | Bombs
+Can Defeat Poes:
+  Nothing
+  # You don't need Mirror Shield because you can simply lure them into the light ray.
+Can Defeat Poes Without Light Ray:
+  Progressive Sword x1
+  | Progressive Bow x1
+  | Boomerang
+  | Hookshot
+  | Skull Hammer
+  | Grappling Hook
+  | Bombs
+  # You can knock the lantern out of its hands, then let it possess you and eventually it will disappear.
+  # Or you can just shoot it with Light Arrows which is easier - but that doesn't need to be in logic since if you have the bow you can knock the lantern out of its hands instead.
+Can Defeat Jalhalla Poes:
+  Progressive Sword x1
+  | Progressive Bow x1
+  | Bombs
+  | Skull Hammer
+  # Note: Grappling Hook stuns Poes, but doesn't damage them.
+Can Defeat Stalfos:
+  Progressive Sword x1
+  | Bombs
+  | Skull Hammer
+  | Progressive Bow x3
+  # Some other items can damage the head once you break the body apart, but you still need sword/bombs/hammer/light arrows to break it apart in the first place.
+Can Defeat Floormasters:
+  Progressive Sword x1
+  | Progressive Bow x1
+  # Skull Hammer also works, but because of the wonky hitbox on floormasters there's a very high chance you'll miss and get taken back to the dungeon entrance, so it's not in the logic.
+  # Bombs also work, but it's very annoying to hit them since they throw the bombs back at you. They also go back in the ground becoming invulnerable if you get too far away.
+  # Progressive Bow x1 would only be an issue if you run out of arrows when you need to kill a ton of Floormasters - aka the Earth Temple foggy Floormaster room. But thankfully that room has tons of skulls that drop arrow refills.
+Can Defeat Morths:
+  Progressive Sword x1
+  | Boomerang
+  | Progressive Bow x1
+  | Hookshot
+  # Skull Hammer technically works but it's extremely annoying to hit them with. Same with bombs.
+Can Defeat Rats:
+  Progressive Sword x1
+  | Progressive Bow x1
+  | Bombs
+  | Boomerang
+  | Skull Hammer
+  | Grappling Hook
+  # Hookshot pulls them towards you but doesn't appear to damage them. Actually, it seems Hookshot can rarely push them out of bounds.
+  # Skull Hammer also stuns them if you hit the ground near them.
+Can Defeat Bombchus:
+  Progressive Sword x1
+  | Progressive Bow x1
+  | Boomerang
+  | Skull Hammer
+  | Grappling Hook
+Can Cut Down Dexivines:
+  Progressive Sword x1
+  | Progressive Bow x1
+  | Bombs
+  | Boomerang
+  | Skull Hammer
+  | Grappling Hook
+  | Hookshot
+Can Defeat Dexivines:
+  Impossible
+  # They never die forever, they come back the instant they're cut down.
+  # Things that trigger when all enemies are dead will never trigger.
+Can Defeat Freshwater Octoroks:
+  Progressive Bow x1
+  | Boomerang
+  | Hookshot
+  # The sword and shield can be used to reflect projectiles back at them to kill them, but this only works if the player is at the same horizontal level as the Octorok, otherwise it won't shoot projectiles in the first place.
+  # Bombs can also kill them, but they only work in situations where you can actually throw a bomb far enough to reach them. Even then, the timing is very precise because the bomb will be defused when it hits the water.
+Can Defeat Saltwater Octoroks:
+  Progressive Bow x1
+  | Boomerang
+  | Hookshot
+  # Bombs work when fired from KoRL's cannon, but if a Saltwater Octorok got placed somewhere not in the sea you couldn't use the cannon, and it's too hard to hit them by throwing bombs.
+Can Defeat Beamos:
+  Nothing
+  # Beamos do not count as alive, and therefore not being able to kill them doesn't stop a room from thinking all enemies in the room are dead.
+Can Defeat Gyorgs:
+  Boomerang
+  | Progressive Bow x1
+  | Hookshot
+
+Can Defeat Gohma:
+  Grappling Hook
+  # Gohma can be killed with just the Grappling Hook since it damages her eye in the second phase.
+Can Defeat Kalle Demos:
+  Boomerang
+  | (
+    Tricked Logic
+    & (
+      Bombs
+      | Progressive Bow x1
+    )
+  )
+  # No sword needed - Kalle Demos can be damaged with just boomerang.
+Can Defeat Gohdan:
+  (Progressive Bow x1 | Hookshot)
+  & Bombs
+  # You can use hookshot to shoot all of Gohdan's eyes instead of the bow.
+Can Defeat Helmaroc King:
+  Skull Hammer
+  # Doesn't require a sword or anything - just the hammer both breaks his mask and damages him.
+Can Defeat Jalhalla:
+  (
+    (
+      Mirror Shield
+      & (
+        Progressive Sword x1
+        | Wind Waker
+        | Grappling Hook
+        | Boomerang
+        | Deku Leaf
+        | Progressive Bow x1
+        | Hookshot
+      )
+    )
+    | Progressive Bow x3
+  )
+  & Power Bracelets
+  & Can Defeat Jalhalla Poes
+  # Light Arrows also work to materialize Jalhalla.
+Can Defeat Molgera:
+  Hookshot
+  & (
+    Progressive Sword x1
+    | Progressive Bow x1
+    | Boomerang
+    | Grappling Hook
+    | Skull Hammer
+    | Bombs
+  )
+  # Bombs are tricky since you have to repeatedly use hookshot to keep the tongue in place while you wait for the bomb, or you have to aim the hookshot at the bomb to set it off instantly.
+
+Can Destroy Cannons:
+  Bombs
+  | Boomerang
+  # Two hits from the boomerang also destroys cannons.
+Can Cut Down Outset Trees:
+  Progressive Sword x1
+  | Boomerang
+  | Skull Hammer
+  # Fire Arrows and Bombs don't work.
+  # Luring a ChuChu up the hill and having it jump on the trees doesn't work.
+  # Carrying the big pig to the trees and enraging it DOES work, it can cut the trees. But this is not currently in the logic because it's obscure and slow to do.
+Can Cut Down Hanging DRC Platform:
+  Progressive Sword x1
+  | Bombs
+  | Progressive Bow x1
+  | Skull Hammer
+  # Hookshot and Grappling Hook can also technically cut the ropes, but it's too precise to aim them.
+  # Boomerang can't cut them at all.
+Can Cut Grass:
+  Progressive Sword x1
+  | Skull Hammer
+  | Boomerang
+  | Bombs
+Can Sword Fight with Orca:
+  (
+  Progressive Sword x1
+  | In Swordless Mode
+  )
+  & Can Travel to Outset Island
+  # Swordless gives you a sword temporarily while in Orca's house, so you don't need to have found a sword item.
+
+# The below macros are used when charts are not randomized.
+# When charts are randomized, these macros are shuffled around by the randomizer logic.
+Chart for Island 1: Treasure Chart 25
+Chart for Island 2: Treasure Chart 7
+Chart for Island 3: Treasure Chart 24
+Chart for Island 4: Triforce Chart 2 & Progressive Wallet x1
+Chart for Island 5: Treasure Chart 11
+Chart for Island 6: Triforce Chart 7 & Progressive Wallet x1
+Chart for Island 7: Treasure Chart 13
+Chart for Island 8: Treasure Chart 41
+Chart for Island 9: Treasure Chart 29
+Chart for Island 10: Treasure Chart 22
+Chart for Island 11: Treasure Chart 18
+Chart for Island 12: Treasure Chart 30
+Chart for Island 13: Treasure Chart 39
+Chart for Island 14: Treasure Chart 19
+Chart for Island 15: Treasure Chart 8
+Chart for Island 16: Treasure Chart 2
+Chart for Island 17: Treasure Chart 10
+Chart for Island 18: Treasure Chart 26
+Chart for Island 19: Treasure Chart 3
+Chart for Island 20: Treasure Chart 37
+Chart for Island 21: Treasure Chart 27
+Chart for Island 22: Treasure Chart 38
+Chart for Island 23: Triforce Chart 1 & Progressive Wallet x1
+Chart for Island 24: Treasure Chart 21
+Chart for Island 25: Treasure Chart 6
+Chart for Island 26: Treasure Chart 14
+Chart for Island 27: Treasure Chart 34
+Chart for Island 28: Treasure Chart 5
+Chart for Island 29: Treasure Chart 28
+Chart for Island 30: Treasure Chart 35
+Chart for Island 31: Triforce Chart 3 & Progressive Wallet x1
+Chart for Island 32: Triforce Chart 6 & Progressive Wallet x1
+Chart for Island 33: Treasure Chart 1
+Chart for Island 34: Treasure Chart 20
+Chart for Island 35: Treasure Chart 36
+Chart for Island 36: Treasure Chart 23
+Chart for Island 37: Treasure Chart 12
+Chart for Island 38: Treasure Chart 16
+Chart for Island 39: Treasure Chart 4
+Chart for Island 40: Treasure Chart 17
+Chart for Island 41: Treasure Chart 31
+Chart for Island 42: Triforce Chart 5 & Progressive Wallet x1
+Chart for Island 43: Treasure Chart 9
+Chart for Island 44: Triforce Chart 4 & Progressive Wallet x1
+Chart for Island 45: Treasure Chart 40
+Chart for Island 46: Triforce Chart 8 & Progressive Wallet x1
+Chart for Island 47: Treasure Chart 15
+Chart for Island 48: Treasure Chart 32
+Chart for Island 49: Treasure Chart 33
+
+# Macros to wrap option checks and make them look better.
+Rematch Bosses Skipped:
+  Option "skip_rematch_bosses" Enabled
+In Swordless Mode:
+  Option "sword_mode" Is "Swordless"
+Outside Swordless Mode:
+  Option "sword_mode" Is Not "Swordless"
+No Logic:
+  Option "logic_mod" Is "Glitched – No Logic"
+Complex Logic:
+  Option "logic_mod" Is "Glitched – No Logic"
+  | Option "logic_mod" Is "Glitched – Lunatic"
+Glitched Logic:
+  Option "logic_mod" Is "Glitched – No Logic"
+  | Option "logic_mod" Is "Glitched – Lunatic"
+  | Option "logic_mod" Is "Glitched – Moderate"
+Tricked Logic:
+  Option "logic_mod" Is "Glitched – No Logic"
+  | Option "logic_mod" Is "Glitched – Lunatic"
+  | Option "logic_mod" Is "Glitched – Moderate"
+  | Option "logic_mod" Is "Glitched – Trivial"
+
+Convenient:
+  (
+    (Option "convenience_option" Is "Convenient" | Option "convenience_option" Is "Plentiful and Convenient")
+    & Hurricane Spin
+    & Magic Meter Upgrade
+    & Progressive Bomb Bag x1
+    & Progressive Quiver x1
+    & Progressive Wallet x1
+  )
+  | Option "convenience_option" Is "Default"
+  | Option "convenience_option" Is "Plentiful"
+
+Not Secret Cave Entrance Rando:
+  Option "randomize_entrances" Is "Disabled"
+  | Option "randomize_entrances" Is "Dungeons"
+
+
+
+Can DRC Backward:
+  Glitched Logic
+  & (
+    Progressive Bow x1
+    | (Bombs & Can Cut or Slash & Complex Logic)
+  )
+  & DRC Small Key x2
+
+Can Burn Pallet Door:
+  Glitched Logic
+  & (
+    Bombs
+    | Progressive Bow x2
+  )
+
+Can Spring Storage:
+  Complex Logic
+  & Iron Boots
+  & Hookshot
+
+Can Door Cancel:
+  Wind Waker
+
+Can Play Fish Minigame:
+  Can Sail
+  & Bait Bag
+  & Hero's Bow
+
+Can Get DRI Boulder Chest:
+  # Bombs work by getting in the ship and shooting the cannon up at the bomb flowers.
+  Progressive Bow x1
+  | Bait Bag
+  | Boomerang
+  | Bombs
+  | (
+    Glitched Logic
+    & Deku Leaf
+    & Wind Waker
+    & Wind's Requiem
+    & Can Cut or Slash
+  )
+
+
+TODO:
+  Impossible
+
+
+Can Sail:
+  Boat's Sail
+  & Can Change Wind Direction
+
+Can Travel to any Island:
+  (
+    Can Play Ballad of Gales
+    & Can Sail
+  ) | Complex Logic
+
+Can Travel to Mother Isle:
+  Can Play Ballad of Gales
+
+Can Travel to Windfall Island Warp:
+  Can Play Ballad of Gales
+
+Can Travel to Tingle Island Warp:
+  Can Play Ballad of Gales
+
+Can Travel to Greatfish Isle Warp:
+  Can Play Ballad of Gales
+
+
+Can Travel to Forsaken Fortress:
+  Can Play Ballad of Gales
+
+Can Travel to Windfall Island:
+  Can Travel to Windfall Island Warp
+  | (
+    Can Travel to Tingle Island Warp
+    & Can Sail
+  )
+  | Can Travel to any Island
+
+Can Travel to Dragon Roost Island:
+  Can Play Ballad of Gales
+
+Can Travel to Tingle Island:
+  Can Travel to Tingle Island Warp
+  | (
+    Can Travel to Greatfish Isle Warp
+    & Can Sail
+  )
+  | (
+    Can Travel to Windfall Island Warp
+    & Can Sail
+  )
+  | Can Travel to any Island
+
+Can Travel to Greatfish Isle:
+  Can Travel to Greatfish Isle Warp
+  | (
+    Can Travel to Tingle Island Warp
+    & Can Sail
+  )
+  | Can Travel to any Island
+
+Can Travel to Tower of the Gods:
+  Can Play Ballad of Gales
+
+Can Travel to Southern Fairy Island:
+  Can Play Ballad of Gales
+
+Can Travel to Forest Haven:
+  Can Play Ballad of Gales
+
+Can Travel to Outset Island:
+  Can Play Ballad of Gales
+  | Option "randomize_starting_island" Disabled
+
+
+Can Travel to Star Island:
+  (
+    Can Travel to Forsaken Fortress
+    & Can Sail
+  )
+  | Can Travel to any Island
+
+Can Travel to Northern Fairy Island:
+  (
+    Can Travel to Windfall Island
+    & Can Sail
+  )
+  | Can Travel to any Island
+
+Can Travel to Northern Fairy Island Sub:
+  (Can Travel to Northern Fairy Island & Can Sail)
+  | Can Travel to any Island
+
+Can Travel to Gale Isle:
+  (
+    Can Travel to Windfall Island
+    & Can Sail
+  )
+  | Can Travel to any Island
+
+Can Travel to Crescent Moon Island:
+  (
+    Can Travel to Windfall Island
+    & Can Sail
+  )
+  | (
+    Can Travel to Dragon Roost Island
+    & Can Sail
+  )
+  | Can Travel to any Island
+
+Can Travel to Crescent Moon Island Sub:
+  (Can Travel to Crescent Moon Island & Can Sail)
+  | Can Travel to any Island
+
+Can Travel to Seven-Star Isles:
+  (
+    Can Travel to Dragon Roost Island
+    & Can Sail
+  )
+  | Can Travel to any Island
+
+Can Travel to Overlook Island:
+  (
+    Can Travel to Dragon Roost Island
+    & Can Sail
+  )
+  | Can Travel to any Island
+
+
+Can Travel to Four-Eye Reef:
+  (
+    Can Travel to Forsaken Fortress
+    & Can Sail
+  )
+  | Can Travel to any Island
+
+Can Travel to Child Isle:
+  (
+    Can Travel to Forsaken Fortress
+    & Can Sail
+  )
+  | (
+    Can Travel to Tingle Island
+    & Can Sail
+  )
+  | Can Travel to any Island
+
+Can Travel to Spectacle Island:
+  (
+    Can Travel to Windfall Island
+    & Can Sail
+  )
+  | (
+    Can Travel to Tingle Island
+    & Can Sail
+  )
+  | Can Travel to any Island
+
+Can Travel to Pawprint Isle:
+  (
+    Can Travel to Windfall Island
+    & Can Sail
+  )
+  | (
+    Can Travel to Dragon Roost Island
+    & Can Sail
+  )
+  | Can Travel to any Island
+
+Can Travel to Flight Control Platform:
+  (
+    Can Travel to Dragon Roost Island
+    & Can Sail
+  )
+  | Can Travel to any Island
+
+Can Travel to Flight Control Platform Sub:
+  (Can Travel to Flight Control Platform & Can Sail)
+  | Can Travel to any Island
+
+Can Travel to Western Fairy Island:
+  (
+    Can Travel to Greatfish Isle
+    & Can Sail
+  )
+  | Can Travel to any Island
+
+Can Travel to Rock Spire Isle:
+  (
+    Can Travel to Greatfish Isle
+    & Can Sail
+  )
+  | (
+    Can Travel to Tingle Island
+    & Can Sail
+  )
+  | Can Travel to any Island
+
+Can Travel to Northern Triangle Island:
+  (
+    Can Travel to Windfall Island
+    & Can Sail
+  )
+  | (
+    Can Travel to Tingle Island
+    & Can Sail
+  )
+  | (
+    Can Travel to Tower of the Gods
+    & Can Sail
+  )
+  | Can Travel to any Island
+
+Can Travel to Eastern Fairy Island:
+  (
+    Can Travel to Windfall Island
+    & Can Sail
+  )
+  | (
+    Can Travel to Dragon Roost Island
+    & Can Sail
+  )
+  | (
+    Can Travel to Tower of the Gods
+    & Can Sail
+  )
+  | Can Travel to any Island
+
+Can Travel to Fire Mountain:
+  (
+    Can Travel to Dragon Roost Island
+    & Can Sail
+  )
+  | (
+    Can Travel to Tower of the Gods
+    & Can Sail
+  )
+  | Can Travel to any Island
+
+Can Travel to Star Belt Archipelago:
+  (
+    Can Travel to Dragon Roost Island
+    & Can Sail
+  )
+  | Can Travel to any Island
+
+
+Can Travel to Three-Eye Reef:
+  (
+    Can Travel to Greatfish Isle
+    & Can Sail
+  )
+  | Can Travel to any Island
+
+Can Travel to Cyclops Reef:
+  (
+    Can Travel to Greatfish Isle
+    & Can Sail
+  )
+  | (
+    Can Travel to Tingle Island
+    & Can Sail
+  )
+  | Can Travel to any Island
+
+Can Travel to Six-Eye Reef:
+  (
+    Can Travel to Tower of the Gods
+    & Can Sail
+  )
+  | Can Travel to any Island
+
+Can Travel to Eastern Triangle Island:
+  (
+    Can Travel to Tower of the Gods
+    & Can Sail
+  )
+  | Can Travel to any Island
+
+Can Travel to Thorned Fairy Island:
+  Can Travel to any Island
+
+
+Can Travel to Needle Rock Isle:
+  (
+    Can Travel to Greatfish Isle
+    & Can Sail
+  )
+  | Can Travel to any Island
+
+Can Travel to Islet of Steel:
+  (
+    Can Travel to Greatfish Isle
+    & Can Sail
+  )
+  | Can Travel to any Island
+
+Can Travel to Stone Watcher Island:
+  (
+    Can Travel to Greatfish Isle
+    & Can Sail
+  )
+  | (
+    Can Travel to Southern Fairy Island
+    & Can Sail
+  )
+  | Can Travel to any Island
+
+Can Travel to Southern Triangle Island:
+  (
+    Can Travel to Tower of the Gods
+    & Can Sail
+  )
+  | (
+    Can Travel to Southern Fairy Island
+    & Can Sail
+  )
+  | Can Travel to any Island
+
+Can Travel to Private Oasis:
+  (
+    Can Travel to Tower of the Gods
+    & Can Sail
+  )
+  | (
+    Can Travel to Southern Fairy Island
+    & Can Sail
+  )
+  | (
+    Can Travel to Forest Haven
+    & Can Sail
+  )
+  | Can Travel to any Island
+
+Can Travel to Bomb Island:
+  (
+    Can Travel to Tower of the Gods
+    & Can Sail
+  )
+  | (
+    Can Travel to Forest Haven
+    & Can Sail
+  )
+  | Can Travel to any Island
+
+Can Travel to Bomb Island Sub:
+  (Can Travel to Bomb Island & Can Sail)
+  | Can Travel to any Island
+
+Can Travel to Bird's Peak Rock:
+  (
+    Can Travel to Tower of the Gods
+    & Can Sail
+  )
+  | (
+    Can Travel to Forest Haven
+    & Can Sail
+  )
+  | Can Travel to any Island
+
+
+Can Travel to Diamond Steppe Island:
+  (
+    Can Travel to Outset Island
+    & Can Sail
+  )
+  | Can Travel to any Island
+
+Can Travel to Five-Eye Reef:
+  (
+    Can Travel to Outset Island
+    & Can Sail
+  )
+  | Can Travel to any Island
+
+Can Travel to Shark Island:
+  (
+    Can Travel to Outset Island
+    & Can Sail
+  )
+  | (
+    Can Travel to Southern Fairy Island
+    & Can Sail
+  )
+  | Can Travel to any Island
+
+Can Travel to Ice Ring Isle:
+  (
+    Can Travel to Forest Haven
+    & Can Sail
+  )
+  | (
+    Can Travel to Southern Fairy Island
+    & Can Sail
+  )
+  | Can Travel to any Island
+
+Can Travel to Cliff Plateau Isles:
+  (
+    Can Travel to Forest Haven
+    & Can Sail
+  )
+  | Can Travel to any Island
+
+
+Can Travel to Horseshoe Island:
+  (
+    Can Travel to Outset Island
+    & Can Sail
+  )
+  | Can Travel to any Island
+
+Can Travel to Headstone Island:
+  (
+    Can Travel to Outset Island
+    & Can Sail
+  )
+  | (
+    Can Travel to Southern Fairy Island
+    & Can Sail
+  )
+  | Can Travel to any Island
+
+Can Travel to Headstone Island Sub:
+  (Can Travel to Headstone Island & Can Sail)
+  | Can Travel to any Island
+
+Can Travel to Two-Eye Reef:
+  (
+    Can Travel to Southern Fairy Island
+    & Can Sail
+  )
+  | Can Travel to any Island
+
+Can Travel to Angular Isles:
+  (
+    Can Travel to Forest Haven
+    & Can Sail
+  )
+  | (
+    Can Travel to Southern Fairy Island
+    & Can Sail
+  )
+  | Can Travel to any Island
+
+Can Travel to Boating Course:
+  (
+    Can Travel to Forest Haven
+    & Can Sail
+  )
+  | Can Travel to any Island
+
+Can Travel to Five-Star Isles:
+  (
+    Can Travel to Forest Haven
+    & Can Sail
+  )
+  | Can Travel to any Island
+
+Can Travel to Five-Star Isles Sub:
+  (Can Travel to Five-Star Isles & Can Sail)
+  | Can Travel to any Island
+
+Can Travel to Postbox:
+  Can Travel to Bird's Peak Rock
+  | Can Travel to Bomb Island
+  | Can Travel to Cliff Plateau Isles
+  | Can Travel to Dragon Roost Island
+  | Can Travel to Eastern Fairy Island
+  | Can Travel to Flight Control Platform
+  | Can Travel to Forest Haven
+  | Can Travel to Needle Rock Isle
+  | Can Travel to Northern Fairy Island
+  | Can Travel to Outset Island
+  | Can Travel to Pawprint Isle
+  | Can Travel to Private Oasis
+  | Can Travel to Southern Fairy Island
+  | Can Travel to Spectacle Island
+  | Can Travel to Stone Watcher Island
+  | Can Travel to Thorned Fairy Island
+  | Can Travel to Tingle Island
+  | Can Travel to Western Fairy Island
+  | Can Travel to Windfall Island

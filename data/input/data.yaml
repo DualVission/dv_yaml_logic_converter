@@ -1,0 +1,194 @@
+#Tracker Data:
+#  Name: # States tracker Name
+#  Game: # States game name
+#  Creator: # States / Lists creator names
+
+#Input:
+#  Macros: macros.txt
+#  Base Logic: # States name of base logic file
+#  Logic Mod: # Lists logic modifications
+#    #: # States name of specific logic mod
+#      Logic Mode: # Lists override or append mode*
+#  Ignore: # Lists things to ignore
+#      Checks: # Lists checks to be ignored
+
+#Output:
+#  Locations:
+#    Split: # Dictates whether to seperate files*
+#    File: # Full File
+#  Item Keys: # Lists all keys for converting names of items, types, etc.
+
+# *Not yet implemented
+
+
+
+Tracker Data:
+  Name: The Wind Waker Randomizer Map Tracker
+  Game: Wind Waker Randomizer
+  Creator:
+    Darkened5ky
+    Spleebie
+    emerald000
+    DualVission
+
+Input:
+  Macros: macros.txt
+  Base Logic: item_locations.txt
+  Data Tags: Logic Modification, Locale Based, Ignore, Append, Special Case
+  Logic Mod:
+    glitched_hard.txt:
+      Logic Mode: Types
+      Needs: Complex Logic
+  Ignore:
+    Macros:
+      - Convenient
+      - TODO
+      - Tricked Logic
+      - Glitched Logic
+      - Complex Logic
+      - No Logic
+      - Can Change Wind Direction
+      - Hero's Sword
+      - Any Master Sword
+      - Full Power Master Sword
+      - Fire Arrows
+      - Ice Arrows
+      - Light Arrows
+      - Any Wallet Upgrade
+      - Picto Box
+      - Deluxe Picto Box
+      - Outside Swordless Mode
+      - In Swordless Mode
+      - Can Travel to Outset Island
+    Checks:
+      - Windfall Island - Battlesquid - Prize 3+
+      - Windfall Island - Battlesquid - Under 20 Shots Prize 2+
+      - Spectacle Island - Barrel Shooting - Prize 3+
+  Append:
+    Macros:
+      Can Change Wind Direction:
+        Needs:
+          Swift Sail | Can Play Wind's Requiem
+      Can Travel to Outset Island:
+        Needs:
+          Can Play Ballad of Gales
+      Can Access Secret Cave Entrance on Diamond Steppe Island:
+        Needs:
+          (
+            Hookshot
+            | (
+              Glitched Logic
+              & Wind Waker
+              & Can Sail
+              & Swift Sail
+            )
+          ) & Can Travel to Diamond Steppe Island
+    Groups:
+      Dragon Roost Cavern Entrance:
+        Tags: Color, Custom Images
+        Checks:
+          Completed Dungeon
+        Color: red
+        Images:
+          Unopened: images/dungeon/1 Heart Container.png
+          Opened: images/Freestanding/Piece of Heart.png
+        Need:
+          Can Access Dungeon Entrance On Dragon Roost Island
+        Type: Dungeon
+        Location:
+          Map: map
+          x: 817
+          y: 901
+      Forbidden Woods Entrance:
+        Tags: Color, Custom Images
+        Checks:
+          Completed Dungeon
+        Color: green
+        Images:
+          Unopened: images/dungeon/2 Heart Container.png
+          Opened: images/Freestanding/Piece of Heart.png
+        Need:
+          Can Access Dungeon Entrance In Forest Haven Sector
+        Type: Dungeon
+        Location:
+          Map: map
+          x: 772
+          y: 813
+      Tower of the Gods Entrance:
+        Tags: Color, Custom Images
+        Checks:
+          Completed Dungeon
+        Color: yellow
+        Images:
+          Unopened: images/dungeon/3 Heart Container.png
+          Opened: images/Freestanding/Piece of Heart.png
+        Need:
+          Can Access Dungeon Entrance In Tower of the Gods Sector
+        Type: Dungeon
+        Location:
+          Map: map
+          x: 660
+          y: 517
+      Earth Temple Entrance:
+        Tags: Color, Custom Images
+        Checks:
+          Completed Dungeon
+        Color: blue
+        Images:
+          Unopened: images/dungeon/5 Heart Container.png
+          Opened: images/Freestanding/Piece of Heart.png
+        Need:
+          Can Access Dungeon Entrance On Headstone Island
+        Type: Dungeon
+        Location:
+          Map: map
+          x: 395
+          y: 995
+      Wind Temple Entrance:
+        Tags: Color, Custom Images
+        Checks:
+          Completed Dungeon
+        Color: orange
+        Images:
+          Unopened: images/dungeon/6 Heart Container.png
+          Opened: images/Freestanding/Piece of Heart.png
+        Need:
+          Can Access Dungeon Entrance On Gale Isle
+        Type: Dungeon
+        Location:
+          Map: map
+          x: 540
+          y: 55
+  Special Case:
+    Checks:
+      Sunken Treasure:
+        Tags: Hosted Item, Custom Images
+        Group Name: $locale Sunken Treasure
+        Checks:
+          Chart:
+            Associated Check: None
+            Hosted Item: chart$number
+            Item Represents: Chart for Island $number
+            Images:
+              Opened: images/Treasure Chart Open.png
+            Need: Nothing
+            Types: Sunken Treasure
+          Sunken Treasure:
+            Associated Check: $locale \- Sunken Treasure
+        Arrange: Grid
+        Size: 7, 7
+        Map: map
+        Location:
+          x: 21
+          dx: 138
+          y: 23
+          dy: 126
+
+Output:
+  Locations:
+    Split: False
+    File: locations.json
+  Keys:
+    Items: items.yaml
+    Types: settings.yaml
+    Groups: groups.yaml

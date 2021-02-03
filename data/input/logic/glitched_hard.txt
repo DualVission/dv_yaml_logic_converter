@@ -1,0 +1,20 @@
+#Created by LeanusCrain/CrainWWR
+Windfall Island - Kane - Place Six Idols on Gate:
+  Mode: o
+  Types: Long Sidequest, Expensive Purchase
+Windfall Island - Kane - Place Shop Guru Statue on Gate:
+  Mode: o
+  Types: Long Sidequest, Expensive Purchase
+Windfall Island - Kane - Place Postman Statue on Gate:
+  Mode: o
+  Types: Long Sidequest, Expensive Purchase
+Windfall Island - Kane - Place Six Flags on Gate:
+  Mode: o
+  Types: Long Sidequest, Expensive Purchase
+
+Mailbox - Beedle's Silver Membership Reward:
+  Mode: o
+  Types: Expensive Purchase, Short Sidequest, Misc
+Mailbox - Beedle's Gold Membership Reward:
+  Mode: o
+  Types: Expensive Purchase, Short Sidequest, Misc
