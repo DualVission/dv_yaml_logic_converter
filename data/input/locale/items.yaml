@@ -30,8 +30,11 @@ Any Master Sword: ms2
 Full Power Master Sword: ms4
 
 Progressive Bow x1: bow
-Progressive Bow x2: firearrowicearrow
+Progressive Bow x2: firearrow,icearrow
 Progressive Bow x3: lightarrow
+Fire Arrows: firearrow
+Ice Arrows: icearrow
+Light Arrows: lightarrow
 
 
 
@@ -149,3 +152,53 @@ No Logic: logic_complex,[logic_no]
 
 Outside Swordless Mode: withsword
 In Swordless Mode: swordless
+
+Chart for Island 1: chart1
+Chart for Island 2: chart2
+Chart for Island 3: chart3
+Chart for Island 4: chart4
+Chart for Island 5: chart5
+Chart for Island 6: chart6
+Chart for Island 7: chart7
+Chart for Island 8: chart8
+Chart for Island 9: chart9
+Chart for Island 10: chart10
+Chart for Island 11: chart11
+Chart for Island 12: chart12
+Chart for Island 13: chart13
+Chart for Island 14: chart14
+Chart for Island 15: chart15
+Chart for Island 16: chart16
+Chart for Island 17: chart17
+Chart for Island 18: chart18
+Chart for Island 19: chart19
+Chart for Island 20: chart20
+Chart for Island 21: chart21
+Chart for Island 22: chart22
+Chart for Island 23: chart23
+Chart for Island 24: chart24
+Chart for Island 25: chart25
+Chart for Island 26: chart26
+Chart for Island 27: chart27
+Chart for Island 28: chart28
+Chart for Island 29: chart29
+Chart for Island 30: chart30
+Chart for Island 31: chart31
+Chart for Island 32: chart32
+Chart for Island 33: chart33
+Chart for Island 34: chart34
+Chart for Island 35: chart35
+Chart for Island 36: chart36
+Chart for Island 37: chart37
+Chart for Island 38: chart38
+Chart for Island 39: chart39
+Chart for Island 40: chart40
+Chart for Island 41: chart41
+Chart for Island 42: chart42
+Chart for Island 43: chart43
+Chart for Island 44: chart44
+Chart for Island 45: chart45
+Chart for Island 46: chart46
+Chart for Island 47: chart47
+Chart for Island 48: chart48
+Chart for Island 49: chart49

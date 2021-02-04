@@ -153,6 +153,7 @@ class checkObj:
 
   def addTypes(self,types):
     if type(types)==type(""):
+      types = ",".join(types.split(", "))
       types = types.split(",")
     assert type(types)==type([])
     for tag in types:

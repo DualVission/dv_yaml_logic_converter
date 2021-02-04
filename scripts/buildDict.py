@@ -16,7 +16,7 @@ class locationFile:
     self.tracker = tracker
     self.tracker_name = data["Tracker Data"]["Name"]
     self.tracker_game = data["Tracker Data"]["Game"]
-    self.tracker_creator = (data["Tracker Data"]["Creator"]).split()
+    self.tracker_creator = data["Tracker Data"]["Creator"]
 
     self.input = data["Input"]
     self.macro = self.input["Macros"]
@@ -39,6 +39,7 @@ class locationFile:
     self.split = self.output["Locations"]["Split"]
     self.export = self.output["Locations"]["File"]
     self.keys = self.output["Keys"]
+    self.item_search = OrderedDict()
 
     # self.processed = None
     self.processed_locales = OrderedDict()
@@ -232,6 +233,7 @@ class locationFile:
               self.processed_groups[group]=groupVar
               groupsLocale[group]=groupVar
           else:
+            group = locale
             groupVar = groupObj(locale)
             groupVar.addTag(locale_data["Tags"])
             if "Multiple Locations" in groupVar.tags:
@@ -259,7 +261,11 @@ class locationFile:
               for check in locale_data["Checks"]:
                 checkTrue = ("{0} - {1}").format(locale,check)
                 checkName = locale_data["Checks"][check]
-                self.processed_checks[checkTrue]=self.searchChecks(locale,checkTrue,self.unprocessed_checks,checkName,groupVar)
+                working=self.searchChecks(locale,checkTrue,self.unprocessed_checks,checkName,groupVar)
+                self.processed_checks[checkTrue]=working
+                for part in working:
+                  raw_check=part.check
+                  self.processed_checks[raw_check]=working
             else:
               groupVar.setName(locale)
               checkStr = locale+" - *"
@@ -397,7 +403,8 @@ class locationFile:
       if type(name)==type(""):
         searchDict[checkStr].setName(name)
       else:
-        searchDict[checkStr].setName(checkStr)
+        name = (checkStr.split(" - "))[-1]
+        searchDict[checkStr].setName(name)
       searchDict[checkStr].addTypes(self.raw_checks[checkStr]["Types"])
       if type(parent)==type(groupObj("")):
         child = searchDict[checkStr]
@@ -408,19 +415,26 @@ class locationFile:
     return processed_checks
 
   def toEmoJSON(self):
+    emoDict = OrderedDict()
+    emoDict["Images"] = OrderedDict()
+    emoDict["Images"]["Opened"] = "chest_opened_img"
+    emoDict["Images"]["Unopened"] = "chest_unopened_img"
+    emoDict["Hosted Item"] = "hosted_item"
     self.ingest()
     self.digest()
     self.specialChecks()
     with open(os.path.join(LOCALE_PATH,self.keys["Items"])) as f:
-      item_search = (yaml.load(f, YamlOrderedDictLoader)).copy()
+      hold = (yaml.load(f, YamlOrderedDictLoader)).copy()
+    for types in hold_search:
+      self.item_search[types] = hold_search[types]
     with open(os.path.join(LOCALE_PATH,self.keys["Types"])) as f:
       hold_search = (yaml.load(f, YamlOrderedDictLoader)).copy()
     for types in hold_search:
-      item_search[types] = hold_search[types]
+      self.item_search[types] = hold_search[types]
     for macro in self.processed_macros:
       hold = self.processed_macros[macro]
       titl = ("@"+"_".join((hold.name.lower()).split(" "))).strip("'")
-      item_search[macro] = titl
+      self.item_search[macro] = titl
     output=[]
     creatorStr=""
     if len(self.tracker_creator):
@@ -476,8 +490,8 @@ class locationFile:
       for group in hold.reqList:
         reqs = ""
         for item in group:
-          if item in item_search:
-            strg = item_search[item]+","
+          if item in self.item_search:
+            strg = self.item_search[item]+","
           elif re.search('Can Access Other Location "',item):
             raw_check = item[len("                           "):-1]
             check = self.unprocessed_checks[raw_check]
@@ -512,7 +526,7 @@ class locationFile:
 \t\t\t\t"name"            : "{name}",
 \t\t\t\t"item_count"      : {number},
 \t\t\t\t"access_rules"    : [ {items} ],
-\t\t\t\t"visibility_rules": [ "{types}" ]
+\t\t\t\t"visibility_rules": [ "{types}" ]{add}
 \t\t\t{close},'''
     for groups in self.processed_groups:
       group = self.processed_groups[groups]
@@ -524,7 +538,7 @@ class locationFile:
       if "Color" in groupTags:
         addTags+=',\n\t\t"color": "{color}"'.format(color=group.color)
       if "Entry" in groupTags:
-        addTags+=',\n\t\t"access_rules": [ {entry} ]'.format(entry=group.entry)
+        addTags+=',\n\t\t"access_rules": [ "{entry}" ]'.format(entry=group.entry)
       for location in locations:
         locString+='''\n\t\t\t{open}
 \t\t\t\t"map": "{map}",
@@ -545,16 +559,19 @@ class locationFile:
             numberChest+=1
             continue
           else:
-            checksString+=checkHeader.format(name=name,open="{",close="}",number=numberChest,items=assc,types=types)
+            checksString+=checkHeader.format(name=name,open="{",close="}",number=numberChest,items=assc,types=types,add=addCheck)
+        else:
+          processed_checks = []
         name=check.name
         numberChest=1
         assc = ""
+        addCheck=""
         if len(check.reqList)>1:
           for required in check.reqList:
             reqs = ""
             for item in required:
-              if item in item_search:
-                strg = item_search[item]+","
+              if item in self.item_search:
+                strg = self.item_search[item]+","
               elif re.search('Can Access Other Location "',item):
                 raw_check = item[len("                           "):-1]
                 check = self.unprocessed_checks[raw_check]
@@ -572,8 +589,8 @@ class locationFile:
           for required in check.reqList:
             reqs = ""
             for item in required:
-              if item in item_search:
-                strg = item_search[item]+","
+              if item in self.item_search:
+                strg = self.item_search[item]+","
               elif re.search('Can Access Other Location "',item):
                 raw_check = item[len("                           "):-1]
                 check = self.unprocessed_checks[raw_check]
@@ -590,10 +607,19 @@ class locationFile:
         if assc!="":
           if accs[-1]==",":
             assc = accs[:-1]
+        if "Custom Images" in group.tags:
+          for image in check.images:
+            attr = emoDict["Images"][image]
+            setn = check.images[image]
+            addCheck+=(",\n"+"\t"*4+'"{attr}": "{setn}"'.format(attr=attr,setn=setn))
+        if "Hosted Item" in group.tags and check.hosted != "":
+          attr = emoDict["Hosted Item"]
+          setn = check.hosted
+          addCheck+=(",\n"+"\t"*4+'"{attr}": "{setn}"'.format(attr=attr,setn=setn))
         types=""
         for tags in check.types:
-          if tags in item_search:
-            strg = item_search[tags]+","
+          if tags in self.item_search:
+            strg = self.item_search[tags]+","
           elif re.search('Can Access Other Location "',tags):
             raw_check = tags[len("                           "):-1]
             check = self.unprocessed_checks[raw_check]
@@ -602,16 +628,16 @@ class locationFile:
             strg = "@{group}/{name},".format(group=parent,name=name)
           types+=(strg).strip("\\")
         processed_checks.append(name)
-      checksString+=checkHeader.format(name=name,open="{",close="}",number=numberChest,items=assc,types=types)
+      checksString+=checkHeader.format(name=name,open="{",close="}",number=numberChest,items=assc,types=types,add=addCheck)
       if checksString[-1]==",":
         checksString=checksString[:-1]
       groupsString += (groupHeader.format(group=group.locale,open="{",close="}",name=group.name,sections=checksString,location=locString,add=addTags)).strip("\\")
     if self.split == "True" or self.split == True:
       macrosFile = "{header}\n[\n{macros}\n]\n{template}\n".format(header=header,macros=macros,template=template)
-      groupsFile = "{header}\n[\n{groups}\n]\n{template}\n".format(header=header,groups=groupHeader,template=template)
+      groupsFile = "{header}\n[\n{groups}\n]\n{template}\n".format(header=header,groups=groupsString,template=template)
       return [ macrosFile, groupsFile ]
     else:
-      outputFile = "{header}\n[\n\t//Macros\n{macros}\n//Groups\n{groups}\n]\n{template}\n".format(header=header,macros=macros,groups=groupHeader,template=template)
+      outputFile = "{header}\n[\n\t//Macros\n{macros}\n//Groups\n{groups}\n]\n{template}\n".format(header=header,macros=macros,groups=groupsString,template=template)
       return [ outputFile ]
 
 def cleanSpec(item):

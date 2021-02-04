@@ -26,10 +26,10 @@ Tracker Data:
   Name: The Wind Waker Randomizer Map Tracker
   Game: Wind Waker Randomizer
   Creator:
-    Darkened5ky
-    Spleebie
-    emerald000
-    DualVission
+    - Darkened5ky
+    - Spleebie
+    - emerald000
+    - DualVission
 
 Input:
   Macros: macros.txt
@@ -60,6 +60,57 @@ Input:
       - Outside Swordless Mode
       - In Swordless Mode
       - Can Travel to Outset Island
+      - Chart for Island 1
+      - Chart for Island 2
+      - Chart for Island 3
+      - Chart for Island 4
+      - Chart for Island 5
+      - Chart for Island 6
+      - Chart for Island 7
+      - Chart for Island 8
+      - Chart for Island 9
+      - Chart for Island 10
+      - Chart for Island 11
+      - Chart for Island 12
+      - Chart for Island 13
+      - Chart for Island 14
+      - Chart for Island 15
+      - Chart for Island 16
+      - Chart for Island 17
+      - Chart for Island 18
+      - Chart for Island 19
+      - Chart for Island 20
+      - Chart for Island 21
+      - Chart for Island 22
+      - Chart for Island 23
+      - Chart for Island 24
+      - Chart for Island 25
+      - Chart for Island 26
+      - Chart for Island 27
+      - Chart for Island 28
+      - Chart for Island 29
+      - Chart for Island 30
+      - Chart for Island 31
+      - Chart for Island 32
+      - Chart for Island 33
+      - Chart for Island 34
+      - Chart for Island 35
+      - Chart for Island 36
+      - Chart for Island 37
+      - Chart for Island 38
+      - Chart for Island 39
+      - Chart for Island 40
+      - Chart for Island 41
+      - Chart for Island 42
+      - Chart for Island 43
+      - Chart for Island 44
+      - Chart for Island 45
+      - Chart for Island 46
+      - Chart for Island 47
+      - Chart for Island 48
+      - Chart for Island 49
+      - Rematch Bosses Skipped
+      - Not Secret Cave Entrance Rando
     Checks:
       - Windfall Island - Battlesquid - Prize 3+
       - Windfall Island - Battlesquid - Under 20 Shots Prize 2+

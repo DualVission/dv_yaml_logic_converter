@@ -9,6 +9,7 @@ except:
   IS_RUNNING_FROM_SOURCE = True
 
 DATA_PATH = os.path.join(ROOT_PATH,"data")
+SCRIPT_PATH = os.path.join(ROOT_PATH,"scripts")
 
 INPUT_PATH = os.path.join(DATA_PATH,"input")
 OUTPUT_PATH = os.path.join(DATA_PATH,"output")

@@ -100,7 +100,7 @@ Dragon Roost Island:
 
 Dragon Roost Cavern:
   Tags: Entry, Color
-  Entry: drc_true, \\[@can_access_dragon_roost_cavern\\]
+  Entry: drc_true,[@can_access_dragon_roost_cavern]
   Color: red
   Location:
     Map: map
@@ -116,7 +116,7 @@ Forest Haven:
 
 Forbidden Woods:
   Tags: Entry, Color
-  Entry: fw_true, \\[@can_access_forbidden_woods\\]
+  Entry: fw_true,[@can_access_forbidden_woods]
   Color: green
   Location:
     Map: map
@@ -132,7 +132,7 @@ Greatfish Isle:
 
 Tower of the Gods:
   Tags: Entry, Color
-  Entry: totg_true, \\[@can_access_tower_of_the_gods\\]
+  Entry: totg_true,[@can_access_tower_of_the_gods]
   Color: yellow
   Location:
     Map: map
@@ -194,7 +194,11 @@ Fire Mountain:
         y: 400
 
 Ice Ring Isle:
-  Tags: None
+  Tags: Custom Names
+  Checks:
+    Frozen Chest:
+    Cave - Chest: Cave Chest
+    Inner Cave - Chest: Interior Cave Chest
   Location:
     Map: map
     x: 630
@@ -220,7 +224,7 @@ Headstone Island:
 
 Earth Temple:
   Tags: Color, Entry
-  Entry: et_true, \\[@can_access_earth_temple\\]
+  Entry: et_true,[@can_access_earth_temple]
   Color: blue
   Location:
     Map: map
@@ -229,7 +233,7 @@ Earth Temple:
 
 Wind Temple:
   Tags: Color, Entry
-  Entry: wt_true, \\[@can_access_wind_temple\\]
+  Entry: wt_true,[@can_access_wind_temple]
   Color: orange
   Location:
     Map: map
